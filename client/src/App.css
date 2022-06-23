@@ -190,4 +190,11 @@ body {
     padding: 30px 30px 30px 90px;
     border-radius: 500px 0 0 500px;
   }
+  .container.left .dino-image,
+  .container.right .dino-image {
+    width: 30px;
+    height: 30px;
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
 }

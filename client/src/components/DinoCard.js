@@ -7,6 +7,7 @@ const DinoCard = ({dino}) => {
   <div className="date">{dino.period}</div>
   <i className="icon fa fa-home"></i>
   <div className="content">
+    <img className="dino-image" src={dino.pics[0].url} alt="" />
     <h2>{dino.name}</h2>
     <p>
       {dino.eats}{dino.regions}
