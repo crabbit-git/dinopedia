@@ -1,0 +1,2 @@
+use javasaurus;
+db.dropDatabase();
