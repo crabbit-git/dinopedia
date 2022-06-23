@@ -5,17 +5,14 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json()); 
-// app.get('', (req, res) => {res.send('hello')})
 
 const ObjectId = require('mongodb').ObjectId;
 const createRouter = function (collection) {
 
-const router = express.Router();
+  const router = express.Router();
 
-
-//INDEX
-router.get('/', (req, res) => {
-// res.send('hello world');
+  //INDEX
+  router.get('/', (req, res) => {
     collection
       .find()
       .toArray()
@@ -25,9 +22,9 @@ router.get('/', (req, res) => {
         res.status(500);
         res.json({ status: 500, error: err });
       });
-      
-      
-//SHOW
+  });
+        
+  //SHOW
   router.get('/:id', (req, res) => {
     const id = req.params.id;
     collection
@@ -40,12 +37,8 @@ router.get('/', (req, res) => {
       });
   });
 
-  });
-
   return router;
 };
-
-
 
 MongoClient.connect('mongodb://localhost:27017') 
   .then((client) => { 
@@ -59,4 +52,3 @@ MongoClient.connect('mongodb://localhost:27017')
 app.listen(5000, function () {
   console.log(`Listening on port ${ this.address().port }`);
 });
-

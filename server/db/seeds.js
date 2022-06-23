@@ -1999,7 +1999,7 @@ const dinosFromApi = [
     }
 ]
 
-const simpleDinos = dinosFromApi.map((dino) => {
+const simpleDinos = dinosFromApi.map(dino => {
   delete dino.shouldShowMap;
   delete dino.refs;
   dino.pics.forEach(pic => {
