@@ -14,8 +14,8 @@ const router = express.Router();
 
 
 //INDEX
-  router.get('/', (req, res) => {
-    // res.send('hello world');
+router.get('/', (req, res) => {
+// res.send('hello world');
     collection
       .find()
       .toArray()
@@ -25,6 +25,21 @@ const router = express.Router();
         res.status(500);
         res.json({ status: 500, error: err });
       });
+      
+      
+//SHOW
+  router.get('/:id', (req, res) => {
+    const id = req.params.id;
+    collection
+      .findOne({ _id: ObjectId(id) })
+      .then((doc) => res.json(doc))
+      .catch((err) => {
+        console.error(err);
+        res.status(500);
+        res.json({ status: 500, error: err });
+      });
+  });
+
   });
 
   return router;
