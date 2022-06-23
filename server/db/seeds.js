@@ -1999,6 +1999,15 @@ const dinosFromApi = [
     }
 ]
 
-db.dinosaurs.insertMany(dinosFromApi);
+const simpleDinos = dinosFromApi.map((dino) => {
+  delete dino.shouldShowMap;
+  delete dino.refs;
+  dino.pics.forEach(pic => {
+    delete pic.votingUrl;
+    delete pic.clickthrough_url;
+    delete pic.thumbnail;
+  });
+  return dino;
+});
 
-// console.log(dinosFromApi);
+db.dinosaurs.insertMany(simpleDinos);
