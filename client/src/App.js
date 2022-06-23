@@ -21,8 +21,8 @@ function App() {
   return (
     <>
     
-    <DinoTimeline allDinosaurs={allDinosaurs}/>
   <h1>Welcome to Dinopedia!</h1>
+    <DinoTimeline allDinosaurs={allDinosaurs}/>
     </>
   );
 }

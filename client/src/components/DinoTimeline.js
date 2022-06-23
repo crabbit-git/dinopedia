@@ -25,7 +25,7 @@ console.log(jurassicList);
 
   return(
     <div className="jurassic-div">
-        <h1>Dinos</h1>
+        
         {jurassicList}
         
         
