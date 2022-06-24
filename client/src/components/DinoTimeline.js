@@ -7,15 +7,15 @@ const DinoTimeline = ({allDinosaurs}) => {
 //     )
 //   })
 
-const filterByPeriod = function(list){
-  const periodList =list.filter((dino) => {
+const filterByPeriod = list => {
+  const periodList = list.filter(dino => {
      return dino.period === "Jurassic"     
   })
   return(
     periodList
   )
 }
-const jurassicList = filterByPeriod(allDinosaurs).map((dino) => {
+const jurassicList = filterByPeriod(allDinosaurs).map(dino => {
   return(
     <DinoCard dino={dino}/>
   )
