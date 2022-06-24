@@ -15,7 +15,7 @@ const createRouter = function (collection) {
   router.get('/', (req, res) => {
     collection
       .find()
-      .sort({"period":1})
+      .sort({"era":-1})
       .toArray()
       .then((docs) => res.json(docs))
       .catch((err) => {

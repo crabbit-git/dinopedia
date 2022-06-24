@@ -48,6 +48,13 @@ const stripDinos = dinosFromApi => {
       const splitPeriod = dino.period.split(' ');
       dino.period = splitPeriod[1];
     }
+    if (dino.period === 'Triassic') {
+      dino.era = '237 - 201 million years ago'
+    } else if (dino.period === 'Jurassic') {
+      dino.era = '201 - 145 million years ago'
+    } else if (dino.period === 'Cretaceous') {
+      dino.era = '145 - 66 million years ago'
+    }
     delete dino.shouldShowMap;
     delete dino.refs;
     dino.pics.forEach(pic => {
