@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import './App.css';
-import { getDinosaurs} from "./helpers/DinosaursService";
+import {getDinosaurs} from "./helpers/DinosaursService";
 import DinoTimeline from "./components/DinoTimeline";
 
 function App() {

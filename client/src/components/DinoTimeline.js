@@ -8,17 +8,17 @@ const DinoTimeline = ({allDinosaurs}) => {
     if (allDinosaurs.indexOf(dino) %2 === 0) {
       cardDirection = "left";
     }
-      return(
-        <DinoCard
-        dino={dino}
-        key={dino._id}
-        cardDirection={cardDirection}
-        periodClass={periodClass}
-        />
-      );
+    return (
+      <DinoCard
+      dino={dino}
+      key={dino._id}
+      cardDirection={cardDirection}
+      periodClass={periodClass}
+      />
+    );
   });
 
-  return(
+  return (
     <div className="jurassic-div">
       {renderDinos} 
     </div>
