@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const mongoClient = require('mongodb').MongoClient;
+const {MongoClient} = require('mongodb');
 
 const dinoNames = [
   'Allosaurus',
@@ -38,8 +38,17 @@ const promisedDinos = dinoNames.map(dinoName => {
 
 const stripDinos = dinosFromApi => {
   return dinosFromApi.map(dino => {
+    if (dino.name === 'Attenborosaurus') {
+      dino.regions[0] = 'Europe';
+    }
+    if (dino.regions.length === 0) {
+      dino.regions[0] = 'unknown'
+    }
     if (dino.eats === '') {
-      dino.eats = '(unknown)'
+      dino.eats = 'unknown';
+    }
+    if (dino.eats === '(unknown)') {
+      dino.eats = 'unknown';
     }
     if (dino.period.includes('/')) {
       const splitPeriod = dino.period.split('/');
@@ -68,15 +77,11 @@ const stripDinos = dinosFromApi => {
 
 Promise.all(promisedDinos)
 .then(data => {
-  const simpleDinos = stripDinos(data);
-  mongoClient
+  MongoClient
   .connect('mongodb://localhost:27017')
   .then(client => {
-    const db = client.db('javasaurus');
-    const dinosaursCollection = db.collection('dinosaurs');
-    dinosaursCollection.insertMany(simpleDinos)
-    .then(() => {
-      client.close();
-    });
+    client.db('javasaurus').collection('dinosaurs')
+    .insertMany(stripDinos(data))
+    .then(() => client.close());
   });
 });
