@@ -23,21 +23,21 @@ const DinoTimeline = ({allDinosaurs}) => {
 const jurassicList = allDinosaurs.map((dino) => {
   if(dino.period === 'Jurassic')
     return(
-      <DinoCard dino={dino}/>
+      <DinoCard dino={dino} containerDirection="left"/>
     )
 })
 const triassicList = allDinosaurs.map((dino) => {
   if(dino.period === 'Triassic')
     return(
-      <DinoCard dino={dino}/>
+      <DinoCard dino={dino} containerDirection="right"/>
     )
 })
 const cretaceousList = allDinosaurs.map((dino) => {
   if(dino.period === 'Cretaceous')
     return(
-      <DinoCard dino={dino}/>
+      <DinoCard dino={dino} containerDirection="left"/>
     )
-})     
+})
 
   return(
     <div className="jurassic-div">

@@ -1,9 +1,9 @@
-const DinoCard = ({dino}) => {
-
+const DinoCard = ({dino, containerDirection}) => {
+  const containerClass = `container ${containerDirection}`;
 
   return(
     <div className="timeline">
-      <div className="container left">
+      <div className={containerClass}>
         <div className="date">{dino.period}</div>
           <i className="icon fa fa-home"></i>
           <div className="content">
