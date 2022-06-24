@@ -20,37 +20,22 @@ const DinoTimeline = ({allDinosaurs}) => {
 //   )
 // }
 
-const jurassicList = allDinosaurs.map((dino) => {
-  if(dino.period === 'Jurassic')
+const renderDinos = allDinosaurs.map(dino => {
+  let periodClass = dino.period;
+  let cardDirection = "right"
+  if (allDinosaurs.indexOf(dino) %2 === 0) {
+    cardDirection = "left";
+  }
     return(
-      <DinoCard dino={dino} containerDirection="left"/>
-    )
-})
-const triassicList = allDinosaurs.map((dino) => {
-  if(dino.period === 'Triassic')
-    return(
-      <DinoCard dino={dino} containerDirection="right"/>
-    )
-})
-const cretaceousList = allDinosaurs.map((dino) => {
-  if(dino.period === 'Cretaceous')
-    return(
-      <DinoCard dino={dino} containerDirection="left"/>
-    )
-})
+      <DinoCard dino={dino} cardDirection={cardDirection} periodClass={periodClass}/>
+    );
+});
 
   return(
     <div className="jurassic-div">
-        
-        {jurassicList}
-        {triassicList}
-        {cretaceousList}
-        
-        
+      {renderDinos} 
     </div>
-      
-
-  )
+  );
 }
 
 export default DinoTimeline

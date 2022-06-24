@@ -3,8 +3,6 @@ import './App.css';
 import { getDinosaurs} from "./helpers/DinosaursService";
 import DinoTimeline from "./components/DinoTimeline";
 
-
-
 function App() {
 
   const [allDinosaurs, setAllDinosaurs] = useState([]);
@@ -14,13 +12,8 @@ function App() {
     .then(data => setAllDinosaurs(data))
   }, [])
 
-
-
-
-
   return (
     <>
-    
   <h1>Welcome to Dinopedia!</h1>
     <DinoTimeline allDinosaurs={allDinosaurs}/>
     </>
