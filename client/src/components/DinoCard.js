@@ -1,4 +1,6 @@
 const DinoCard = ({dino}) => {
+
+
   return(
     <div className="timeline">
       <div className="container left">
@@ -10,7 +12,7 @@ const DinoCard = ({dino}) => {
             <p>
               Diet: {dino.eats}
               <br/>
-              Found in: {dino.regions}
+              Found in: {dino.regions.join(", ")}
             </p>
       </div>
     </div>

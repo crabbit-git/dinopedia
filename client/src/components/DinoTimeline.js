@@ -7,26 +7,44 @@ const DinoTimeline = ({allDinosaurs}) => {
 //     )
 //   })
 
-const filterByPeriod = list => {
-  const periodList = list.filter(dino => {
-     return dino.period === "Jurassic"     
-  })
-  return(
-    periodList
-  )
-}
-const jurassicList = filterByPeriod(allDinosaurs).map(dino => {
-  return(
-    <DinoCard dino={dino}/>
-  )
-})
-console.log(jurassicList);
+// const filterByPeriod = list => {
+//   const jurassicList = list.filter(dino => {
+//      if(dino.period === "Jurassic"){
+//      return jurassicList})
+//   const triassicList = list.filter(dino => {
+//      if(dino.period === "Triassic"){
+//      return triassicList})
 
+//   return(
+//     console.log(periodList)
+//   )
+// }
+
+const jurassicList = allDinosaurs.map((dino) => {
+  if(dino.period === 'Jurassic')
+    return(
+      <DinoCard dino={dino}/>
+    )
+})
+const triassicList = allDinosaurs.map((dino) => {
+  if(dino.period === 'Triassic')
+    return(
+      <DinoCard dino={dino}/>
+    )
+})
+const cretaceousList = allDinosaurs.map((dino) => {
+  if(dino.period === 'Cretaceous')
+    return(
+      <DinoCard dino={dino}/>
+    )
+})     
 
   return(
     <div className="jurassic-div">
         
         {jurassicList}
+        {triassicList}
+        {cretaceousList}
         
         
     </div>
