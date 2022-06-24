@@ -38,15 +38,25 @@ const promisedDinos = dinoNames.map(dinoName => {
 
 const stripDinos = dinosFromApi => {
   return dinosFromApi.map(dino => {
-      delete dino.shouldShowMap;
-      delete dino.refs;
-      dino.pics.forEach(pic => {
-        delete pic.votingUrl;
-        delete pic.clickthrough_url;
-        delete pic.thumbnail;
-      });
-      return dino;
+    if (dino.eats === '') {
+      dino.eats = '(unknown)'
+    }
+    if (dino.period.includes('/')) {
+      const splitPeriod = dino.period.split('/');
+      dino.period = splitPeriod[0];
+    } else if (dino.period.includes('Early') || dino.period.includes('Late')) {
+      const splitPeriod = dino.period.split(' ');
+      dino.period = splitPeriod[1];
+    }
+    delete dino.shouldShowMap;
+    delete dino.refs;
+    dino.pics.forEach(pic => {
+      delete pic.votingUrl;
+      delete pic.clickthrough_url;
+      delete pic.thumbnail;
     });
+    return dino;
+  });
 }
 
 Promise.all(promisedDinos)
