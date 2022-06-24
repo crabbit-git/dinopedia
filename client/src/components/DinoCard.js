@@ -1,7 +1,7 @@
 const DinoCard = ({dino, cardDirection, periodClass}) => {
   const containerClass = `container ${cardDirection}`;
   const timelineClass = `timeline ${periodClass}`
-  return(
+  return (
     <div className={timelineClass}>
       <div className={containerClass}>
         <div className="date">{dino.period}</div>
@@ -22,7 +22,7 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default DinoCard;
