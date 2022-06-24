@@ -20,22 +20,22 @@ const DinoTimeline = ({allDinosaurs}) => {
 //   )
 // }
 
-const jurassicList = allDinosaurs.map((dino) => {
-  if(dino.period === 'Jurassic')
-    return(
-      <DinoCard dino={dino}/>
-    )
-})
 const triassicList = allDinosaurs.map((dino) => {
   if(dino.period === 'Triassic')
-    return(
-      <DinoCard dino={dino}/>
+  return(
+    <DinoCard className="TriassicBlue" dino={dino}/>
     )
-})
+  })
+  const jurassicList = allDinosaurs.map((dino) => {
+    if(dino.period === 'Jurassic')
+      return(
+        <DinoCard className="JurassicTeal" dino={dino}/>
+      )
+  })
 const cretaceousList = allDinosaurs.map((dino) => {
   if(dino.period === 'Cretaceous')
     return(
-      <DinoCard dino={dino}/>
+      <DinoCard className="CretaceousGreen" dino={dino}/>
     )
 })     
 
