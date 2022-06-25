@@ -1,6 +1,7 @@
 
 import './Navbar.css'
 import Search from './Search';
+import Player from './Audio';
 
 const Navbar = ({allDinosaurs}) => {
 
@@ -28,6 +29,7 @@ const Navbar = ({allDinosaurs}) => {
     //   searchBtn.classList.add("hide");
     //   cancelBtn.classList.add("show");
     // }
+    const url = 'https://www.nhm.ac.uk/content/dam/nhmwww/take-part/dippy-on-tour/jurassic-soundscape.mp3'
 
    
     return (  
@@ -36,8 +38,8 @@ const Navbar = ({allDinosaurs}) => {
             <div class="menu-icon">
                 <span class="fas fa-bars"></span>
             </div>
-            <div class="logo">
-                <img id="logo-pic" src="https://play-lh.googleusercontent.com/6gpx0U7xAp2OBnW8EswCwC_xtUiP9FaZk-z0D2dRVcJiFv-bKBN_Ui4uecMwNmaD7a4" alt="dino logo" />
+            <div className="logo">
+                <Player url={url}/>
             </div>
             <div class="logo">
                 Javasaurus
