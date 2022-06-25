@@ -15,9 +15,6 @@ const Navbar = ({allDinosaurs}) => {
             <label htmlFor="fav">
                 <img id="star" src="https://thumbs.dreamstime.com/z/golden-star-christmas-decoration-clipping-path-isolated-white-background-163815373.jpg" alt="star"  />Favourites
             </label>
-            <form >
-                <input type="text" />
-            </form>
             <Search allDinosaurs={allDinosaurs}  />
             </div>
     );
