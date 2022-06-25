@@ -2,7 +2,7 @@
     .ReactModal__Overlay {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
-
+        z-index: 1;
     }
     
     .ReactModal__Overlay--after-open{
@@ -15,6 +15,8 @@
     }
    
     .dino-modal-content {
+        display: flex;
+        flex-direction: column;
         border: rgb(0, 255, 21) solid 10px;
         background-color:  greenyellow;
         position: absolute;
@@ -33,3 +35,14 @@
         padding: 20px;
         font-family: 'Courier New', Courier, monospace;
           }
+
+.dino-modal-image {
+    /* position: absolute; */
+    width: 100%;
+    background-color: white;
+}
+.dino-modal-image-div {
+    /* position: absolute; */
+    width: auto;
+    background-color: white;
+}

@@ -29,9 +29,9 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
         <div className="content">
           <img 
               className="dino-image"
-              src={dino.pics[0].url}
+              src={dino.pics[2].url}
               alt={dino.name}
-              width="300"
+              
           />
           <h2>{dino.name}</h2>
           
@@ -43,25 +43,30 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
         className="dino-modal-content"
         // overlayClassName="dino-modal-overlay"
         >
-          <img 
-              className="dino-image"
-              src={dino.pics[0].url}
-              alt={dino.name}
-              width="300"
-              />
-          <button onClick={toggleModal} type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-remove"></span> X 
-        </button>
+          <div className="dino-modal-image-div">
+            <img className="dino-modal-image"
+                src={dino.pics[1].url}
+                alt={dino.name}
+            />
+          </div>
         
-              <h2>{dino.name}</h2>
-        <p>
+        <button className="dino-modal-close-button"
+        onClick={toggleModal} type="button"> X 
+        </button>
+
+        <h2>{dino.name}</h2>
+              
+        <div className="dino-modal-info">
             <b>Diet:</b> {dino.eats}
             <br/>
             <b>Found in:</b> {dino.regions.join(", ")}
             <br/>
+        </div>
+
+          <div className="dino-modal-map">
             <img src={mapClass} alt="" />
-            
-          </p>
+
+          </div>
       </Modal>
     </div>
 
