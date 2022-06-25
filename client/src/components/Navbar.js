@@ -7,7 +7,6 @@ const Navbar = ({allDinosaurs}) => {
 
 
    
-    
     return (  
         <div id="navbar-container" >
             <img id="logo" src="https://play-lh.googleusercontent.com/6gpx0U7xAp2OBnW8EswCwC_xtUiP9FaZk-z0D2dRVcJiFv-bKBN_Ui4uecMwNmaD7a4" alt="dino logo" />
