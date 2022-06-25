@@ -27,9 +27,10 @@ const Search = ({allDinosaurs}) => {
 return ( 
   <div id="search-div">
   <input type="text" id="background-input" />
-  <input type="text" id="search" placeholder="Type name of dino.." />
+  <input type="search" id="search" placeholder="Type name of dino.." /> 
 </div>
 );
 }
  
 export default Search;
+
