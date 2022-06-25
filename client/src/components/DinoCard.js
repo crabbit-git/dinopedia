@@ -45,7 +45,7 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
         >
           <div className="dino-modal-image-div">
             <img className="dino-modal-image"
-                src={dino.pics[1].url}
+                src={dino.pics[2].url}
                 alt={dino.name}
             />
           </div>
