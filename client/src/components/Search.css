@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: sans-serif;
 }
 
@@ -38,4 +38,27 @@ input {
 
 .suggestions li:not(:last-of-type) {
   border-bottom: 1px solid #999;
+} */
+
+
+
+
+
+#search-div
+{
+  position: relative;
+}
+#background-input
+{
+  position: absolute;
+  color: #999999;
+  height:25px;
+  width:250px;
+}
+#search
+{
+  position: relative;
+  background: transparent;
+  height:25px;
+  width:250px;
 }
