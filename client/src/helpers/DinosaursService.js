@@ -4,3 +4,5 @@ export const getDinosaurs = () => {
     return fetch(baseURL)
       .then(res => res.json())
 }
+
+
