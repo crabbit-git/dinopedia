@@ -2,7 +2,6 @@ import DinoCard from "./DinoCard";
 
 const DinoTimeline = ({allDinosaurs}) => {
 
-
   const renderDinos = allDinosaurs.map(dino => {
     let periodClass = dino.period;
     let cardDirection = "right"
@@ -21,7 +20,7 @@ const DinoTimeline = ({allDinosaurs}) => {
 
   return (
 
-    <div className="jurassic-div">
+    <div className="timeline-container">
       {renderDinos} 
     </div>
   );
