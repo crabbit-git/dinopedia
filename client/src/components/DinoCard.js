@@ -2,7 +2,7 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
   const containerClass = `container ${cardDirection}`;
   const timelineClass = `timeline ${periodClass}`
   return (
-    <div id={dino.name} className={timelineClass}>
+    <div id={dino.name.toLowerCase()} className={timelineClass}>
       <div className={containerClass}>
         <div className="date">{dino.period}</div>
         <i className="icon fa fa-home"/>
