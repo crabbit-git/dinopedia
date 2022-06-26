@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json()); 
 
 const ObjectId = require('mongodb').ObjectId;
-const createRouter = function (collection) {
+const createRouter = collection => {
 
   const router = express.Router();
 
@@ -24,8 +24,13 @@ const createRouter = function (collection) {
         res.json({ status: 500, error: err });
       });
   });
-        
-  //SHOW
+
+  //SHOW (search)
+  router.get('/?q=:searchQuery', (req, res) => {
+    res.redirect(`/#${req.params.searchQuery}`);
+  });
+
+  //SHOW (modals)
   router.get('/:id', (req, res) => {
     const id = req.params.id;
     collection

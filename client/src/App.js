@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <Navbar allDinosaurs={allDinosaurs} />
+      <Navbar allDinosaurs={allDinosaurs}/>
       <DinoTimeline allDinosaurs={allDinosaurs}/>
     </div>
   );

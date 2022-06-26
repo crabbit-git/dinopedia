@@ -25,8 +25,8 @@ const Search = ({allDinosaurs}) => {
 
   return ( 
     <div id="search-div">
-        <input type="text" id="background-input" />
-      <form method="GET">
+      <form action="" method="GET">
+        <input type="search" name="q" id="background-input" />
         <input type="search" id="search" placeholder="Search for a dinosaur!" />
         <button type="submit" value="Go!">Go!</button>
       </form>
