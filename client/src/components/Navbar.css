@@ -1,6 +1,5 @@
 
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
-  
 
   #navbarr{
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +15,6 @@
     transform: translateY(-31%);
     width: 100%;
     z-index: 100;
-
   }
 
   #tiny-dino {
