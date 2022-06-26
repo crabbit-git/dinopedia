@@ -48,14 +48,21 @@ body {
   content: '';
   position: absolute;
   width:7px;
-  /* background: #0e5573; */
-  background-image: linear-gradient(#0e5573, yellow);
+  background: #0e5573;
+  /* background-image: linear-gradient(#0e5573, yellow); */
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
   /* border: rgb(208, 255, 0) 5px solid; */
 }
+
+/* each box of the timeline - Triassic */
+/* .timeline::after .Traissic {
+  background-image: linear-gradient(#0e5573, yellow);
+  background-color: red;
+  border: rgb(208, 255, 0) 5px solid;
+} */
 
 
 /* box around the card, right of the timeline */
@@ -126,12 +133,24 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  /* transform: rotateZ(90deg); */
   z-index: 1;
   transform-origin: 16 0;
   padding: 0px 10px 0px 10px;
+  /* background-color: #0e5573; */
+  /* border: #F6D155 2px solid;  */
+} 
+
+
+/* period name only eg Triassic */
+.Triassic .container .date {
   background-color: #0e5573;
   /* border: #F6D155 2px solid;  */
+} 
+
+
+/* period name only eg Jurassic */
+.Jurassic .container .date {
+  background-color: #0e7369;
 } 
 
 
@@ -143,12 +162,28 @@ body {
   /* border: red 3px solid; */
 }
 
+
 .container.right .date {
   left: -95px;
   transform: rotate(-90deg) ;
   text-shadow: 2px 2px 3px #000000;
   /* border: #F6D155 3px solid;  */
+}
 
+.Cretaceous .container.left .date  {
+  transform: rotate(90deg) ;
+  right: -130px;
+  text-shadow: 2px -2px 3px #000000;
+  background-color: #12793f;
+  /* border: red 3px solid; */
+}
+
+.Cretaceous .container.right .date  {
+  left: -130px;
+  transform: rotate(-90deg) ;
+  text-shadow: 2px 2px 3px #000000;
+  background-color: #12793f;
+  /* border: red 3px solid; */
 }
 
 /* bigger white circle on the card */
@@ -159,12 +194,10 @@ body {
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-  /* background: #F6D155; */
   border: 2px solid #ffffff;
   border-radius: 40px;
   text-align: center;
   font-size: 18px;
-  /* color: #006E51; */
   z-index: 1;
 }
 /* bigger white circle on the card - position in relation to the line */
@@ -178,12 +211,49 @@ body {
 
 /* the card colour and background - left */
 .container.left .content {
-  background: #0e5573;
   position: relative;
   padding: 20px 0px 10px 110px;
   border-radius: 0px 50px 30px 50px;
   box-shadow: 2px 2px 5px #000000;
   /* border: rgb(9, 227, 17) 2px solid; */
+}
+
+/* the card colour and background - left Triassic */
+.Triassic .container.left .content {
+  background-image: linear-gradient( #0e5573, #073346);
+}
+
+/* the card colour and background - left Jurassic */
+.Jurassic .container.left .content {
+  background-image: linear-gradient( #0e7369, #074a43);
+}
+
+/* the card colour and background - left Cretaceous */
+.Cretaceous .container.left .content {
+  background-image: linear-gradient( #12793f,  #0b5029);
+}
+
+/* the card colour and background - right */
+.container.right .content {
+  position: relative;
+  padding: 20px 0px 10px 110px;
+  border-radius: 50px 0px 50px 30px;
+  box-shadow: 2px 2px 5px #000000;
+}
+
+/* the card colour and background - right Triassic */
+.Triassic .container.right .content {
+   background-image: linear-gradient( #0e5573, #073346);
+}
+
+/* the card colour and background - right Jurassic */
+.Jurassic .container.right .content {
+  background-image: linear-gradient( #0e7369, #074a43);
+}
+
+/* the card colour and background - right Cretaceous */
+.Cretaceous .container.right .content {
+  background-image: linear-gradient( #12793f,  #0b5029);
 }
 
 /* the card colour and background - right */
@@ -204,23 +274,38 @@ body {
   color: #ffffff;
 }
 
-/* .container .content p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 22px;
-  color: #000000;
-} */
-
 
 .dino-image{
   border-radius: 0px 50px 30px 50px;
   border: #0e5573 8px solid;
- width:300px;
-  /* height:300px; */
-  object-fit: scale-down;
+  width: 300px;
+  /* height: 150px; */
+  object-fit: cover;
   box-shadow: 2px 2px 5px #000000;
 }
 
-/* [dino.period] {
-background-color: red;
+.dino-image:hover{
+  border: #f99407 8px solid;
+  filter: blur(2px);
+  filter: saturate(400%);
+  box-shadow: 5px 5px 15px #000000;
+  cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
+}
+
+
+/* 
+.content .bootstrapbtn {
+background-color: yellow;
+height: 200px;
+width: 200px;
 } */
+
+#styledimg {
+  background-image: url(https://toppng.com/uploads/preview/5-point-stars-png-star-icon-flat-11562958768wpf63hu4tq.png);
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+  }

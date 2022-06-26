@@ -47,6 +47,7 @@ font-family: 'Rubik Moonrocks', cursive; */
         border-radius: 4px;
         outline: none;
         padding: 0px 100px;
+        box-shadow: 2px 2px 7px #000000;
           }
 
 
@@ -55,7 +56,8 @@ font-family: 'Rubik Moonrocks', cursive; */
     width: 100%;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
-    
+    box-shadow: 2px 2px 5px #000000;
+    filter: saturate(250%);
 }
         
 .dino-modal-close-button {
@@ -81,10 +83,13 @@ h3 {
     font-family: 'Architects Daughter', cursive;
     color: white;
     font-size: 30px;
-    padding-top: 10px;
+    padding: 20px 20px;
+    background-image: linear-gradient( #0e5573, #073346);
+    border-radius: 0px 50px 30px 50px;
 }
 
 .dino-modal-map {
     padding-bottom: 40px;
     padding-top: 20px;
 }
+

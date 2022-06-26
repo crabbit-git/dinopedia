@@ -26,8 +26,10 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
     <div id={dino.name.toLowerCase()} className={timelineClass}>
       <div className={containerClass}>
         <div className="date">{dino.period}</div>
-        <i className="icon fa fa-home"/>
+        <i className="icon"/>
         <div className="content">
+        <div id="styledimg"></div>
+
           <img
             onClick={toggleModal}
             className="dino-image"
@@ -35,7 +37,7 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
             alt={dino.name}
           />
           <h2>{dino.name}</h2>
-          <button id="fav-button">Add to favourites</button>
+          {/* <button id="fav-button" >Add to favourites</button> */}
         </div>
       </div>
       <Modal isOpen={isOpen}
@@ -56,6 +58,8 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
             />
           </div>
         <div className="dino-modal-info">
+            <b>Period:</b> {dino.period}
+            <br />
             <b>Diet:</b> {dino.eats}
             <br/>
             <b>Found in:</b> {dino.regions.join(", ")}
