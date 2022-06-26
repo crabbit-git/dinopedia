@@ -23,8 +23,8 @@ const Search = ({allDinosaurs}) => {
     });
   });
 
-  const handleSearch = (event) => {
-    event.preventDefault();
+  const handleSearch = submit => {
+    submit.preventDefault();
     const searchBox = document.querySelector('#background-input');
     const searchValue = searchBox.value;
 		if(!searchValue) {
@@ -37,7 +37,7 @@ const Search = ({allDinosaurs}) => {
 		}
 		console.log(`will try and scroll node ${selectedNode} into view`);
 		selectedNode.scrollIntoView();
-}
+  }
 
   return ( 
     <div id="search-div">

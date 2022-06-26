@@ -25,11 +25,6 @@ const createRouter = collection => {
       });
   });
 
-  // TRYING TO REDIRECT (currently failing miserably)
-  // router.get('/?q=tyrannosaurus', (req, res) => {
-  //   res.redirect('https://www.google.com/');
-  // });
-
   //SHOW (modals?)
   // router.get('/:id', (req, res) => {
   //   const id = req.params.id;
