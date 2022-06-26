@@ -1,5 +1,6 @@
 import './Search.css'
 import $ from 'jquery'
+import React, { useState } from 'react'
 
 const Search = ({allDinosaurs}) => {
 
@@ -41,7 +42,7 @@ const Search = ({allDinosaurs}) => {
 
   return (
     <div id="search-div">
-      <form id="search-form" autocomplete="off" onSubmit={handleSearch}>
+      <form id="search-form" autoComplete="off" onSubmit={handleSearch}>
         <input type="search" name="q" id="background-input" />
         <input type="search" id="search" placeholder="Search for a dinosaur!" />
         <button type="submit" id="go" value="Go!">Go!</button>
