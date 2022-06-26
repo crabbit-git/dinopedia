@@ -18,20 +18,20 @@ const Search = ({allDinosaurs}) => {
         $("#background-input").val('');
       } else if (dino.indexOf(searchText.toLowerCase()) === 0) {
       let currentLength = searchText.length;
-      console.log($("#background-input").val(searchText+""+dino.substring(currentLength)));
+      $("#background-input").val(searchText+""+dino.substring(currentLength));
       }
     });
   });
 
   return ( 
     <div id="search-div">
-      <form action="" method="GET">
+      <form action="/" method="GET">
         <input type="search" name="q" id="background-input" />
         <input type="search" id="search" placeholder="Search for a dinosaur!" />
-        <button type="submit" value="Go!">Go!</button>
+        <button type="submit" id="go" value="Go!">Go!</button>
       </form>
     </div>
   );
 }
- 
+
 export default Search;

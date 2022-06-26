@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState} from 'react';
 import './App.css';
-import DinoTimeline from "./components/DinoTimeline";
-import Navbar from "./components/Navbar";
+import DinoTimeline from './components/DinoTimeline';
+import Navbar from './components/Navbar';
 
 function App() {
 

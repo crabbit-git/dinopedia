@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
+const {MongoClient} = require('mongodb');
 const cors = require('cors');
 
 app.use(cors());
@@ -25,23 +25,23 @@ const createRouter = collection => {
       });
   });
 
-  //SHOW (search)
-  router.get('/?q=:searchQuery', (req, res) => {
-    res.redirect(`/#${req.params.searchQuery}`);
-  });
+  // TRYING TO REDIRECT (currently failing miserably)
+  // router.get('/?q=tyrannosaurus', (req, res) => {
+  //   res.redirect('https://www.google.com/');
+  // });
 
-  //SHOW (modals)
-  router.get('/:id', (req, res) => {
-    const id = req.params.id;
-    collection
-      .findOne({ _id: ObjectId(id) })
-      .then((doc) => res.json(doc))
-      .catch((err) => {
-        console.error(err);
-        res.status(500);
-        res.json({ status: 500, error: err });
-      });
-  });
+  //SHOW (modals?)
+  // router.get('/:id', (req, res) => {
+  //   const id = req.params.id;
+  //   collection
+  //     .findOne({ _id: ObjectId(id) })
+  //     .then((doc) => res.json(doc))
+  //     .catch((err) => {
+  //       console.error(err);
+  //       res.status(500);
+  //       res.json({ status: 500, error: err });
+  //     });
+  // });
 
   return router;
 };
