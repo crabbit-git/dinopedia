@@ -25,23 +25,23 @@ const Search = ({allDinosaurs}) => {
 
   const handleSearch = submit => {
     submit.preventDefault();
-    const searchBox = document.querySelector('#background-input');
-    const searchValue = searchBox.value;
+    const searchValue = document.querySelector('#background-input').value;
 		if(!searchValue) {
-			console.error('no value provided to search for');
+			console.error('no match found or no value provided');
 			return;
 		}
 		const selectedNode = document.getElementById(searchValue);
-		if(!selectedNode) {
-			console.error(`couldn't find node with ID: ${searchValue}`);
-		}
-		console.log(`will try and scroll node ${selectedNode} into view`);
+		// if(!selectedNode) {
+		// 	console.error(`couldn't find node with ID: ${searchValue}`);
+		// }
+		console.log(`scrolling to ${searchValue} and resetting search box`);
 		selectedNode.scrollIntoView();
+    document.querySelector('#search-form').reset();
   }
 
-  return ( 
+  return (
     <div id="search-div">
-      <form id="search-form" onSubmit={handleSearch}>
+      <form id="search-form" autocomplete="off" onSubmit={handleSearch}>
         <input type="search" name="q" id="background-input" />
         <input type="search" id="search" placeholder="Search for a dinosaur!" />
         <button type="submit" id="go" value="Go!">Go!</button>
