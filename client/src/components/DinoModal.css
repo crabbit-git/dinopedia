@@ -1,3 +1,15 @@
+/* fonts imported */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@100;300;400;600&family=Permanent+Marker&family=Righteous&family=Rubik+Moonrocks&display=swap');
+
+
+/* font-family: 'Architects Daughter', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Subrayada', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Rubik Moonrocks', cursive; */
+
 
     .ReactModal__Overlay {
         opacity: 0;
@@ -17,32 +29,62 @@
     .dino-modal-content {
         display: flex;
         flex-direction: column;
-        border: rgb(0, 255, 21) solid 10px;
-        background-color:  greenyellow;
+        background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/01/19/30297/e677e440bb636b6f6d0b3e250e60e8f5.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
         position: absolute;
-        top: 100px;
-        left: 100px;
-        right: 100px;
-        height: 30%;
-        width: 80%;
-        min-height: 400px;
+        top: 150px;
+        left: 25%;
+        /* right: 50%; */
+        height: 70%;
+        width: 50%;
+        min-height: auto;
         min-width: 200px;
-        border: 1px solid #ccc;
+        border: 3px solid #0e5573;
         overflow: auto;
-        -webkit-overflow-scrolling: touch;
+        /* -webkit-overflow-scrolling: touch; */
         border-radius: 4px;
         outline: none;
-        padding: 20px;
-        font-family: 'Courier New', Courier, monospace;
+        padding: 0px 100px;
           }
+
 
 .dino-modal-image {
     /* position: absolute; */
     width: 100%;
-    background-color: white;
+    border-radius: 0px 50px 30px 50px;
+    border: #0e5573 8px solid;
+    
 }
-.dino-modal-image-div {
-    /* position: absolute; */
-    width: auto;
-    background-color: white;
+        
+.dino-modal-close-button {
+    position: absolute;
+    width:40px;
+    height: 40px;
+    right:0;
+    top: 0;
+    background-color: orange;
+    font-size: large;
+    font-family: 'Permanent Marker', cursive;;
+}
+
+h3 {
+    font-family: 'Bangers', cursive;
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.dino-modal-info {
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.dino-modal-map {
+    padding-bottom: 40px;
+    padding-top: 20px;
 }

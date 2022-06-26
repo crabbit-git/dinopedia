@@ -44,6 +44,9 @@ const stripDinos = dinosFromApi => {
     if(dino.name === "Camposaurus"){
       dino.pics[2].url =  "http://images.dinosaurpictures.org/Camposaurus_799e.jpg";
     }
+    if(dino.name === "Brachiosaurus"){
+      dino.pics[2].url =  "http://images.dinosaurpictures.org/papo_brachiosaurus_2012_cf3f.jpg";
+    }
     if(dino.name === "Blikanasaurus"){
       dino.pics[2].url =  "http://images.dinosaurpictures.org/blikanasaurus_cromptoni_by_teratophoneus-d4m7et6_7c92.jpg";
     }
