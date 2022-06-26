@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
+const {MongoClient} = require('mongodb');
 const cors = require('cors');
 
 app.use(cors());
 app.use(express.json()); 
 
 const ObjectId = require('mongodb').ObjectId;
-const createRouter = function (collection) {
+const createRouter = collection => {
 
   const router = express.Router();
 
@@ -24,19 +24,19 @@ const createRouter = function (collection) {
         res.json({ status: 500, error: err });
       });
   });
-        
-  //SHOW
-  router.get('/:id', (req, res) => {
-    const id = req.params.id;
-    collection
-      .findOne({ _id: ObjectId(id) })
-      .then((doc) => res.json(doc))
-      .catch((err) => {
-        console.error(err);
-        res.status(500);
-        res.json({ status: 500, error: err });
-      });
-  });
+
+  //SHOW (modals?)
+  // router.get('/:id', (req, res) => {
+  //   const id = req.params.id;
+  //   collection
+  //     .findOne({ _id: ObjectId(id) })
+  //     .then((doc) => res.json(doc))
+  //     .catch((err) => {
+  //       console.error(err);
+  //       res.status(500);
+  //       res.json({ status: 500, error: err });
+  //     });
+  // });
 
   return router;
 };

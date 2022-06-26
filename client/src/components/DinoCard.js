@@ -22,9 +22,10 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
 
 
   return (
-    <div  id={dino.name} className={timelineClass}>
+
+    <div id={dino.name.toLowerCase()} className={timelineClass}>
       <div onClick={toggleModal} className={containerClass}>
-          <div className="date" style={{color: "red"}}>{dino.period}</div>
+        <div className="date">{dino.period}</div>
         <i className="icon fa fa-home"/>
         <div className="content">
           {/* <div className="date">{dino.period}</div> */}
@@ -56,8 +57,6 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
                 alt={dino.name}
             />
           </div>
-
-              
         <div className="dino-modal-info">
             <b>Diet:</b> {dino.eats}
             <br/>

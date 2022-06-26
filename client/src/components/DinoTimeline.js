@@ -19,7 +19,8 @@ const DinoTimeline = ({allDinosaurs}) => {
   });
 
   return (
-    <div className="jurassic-div">
+
+    <div className="timeline-container">
       {renderDinos} 
     </div>
   );
