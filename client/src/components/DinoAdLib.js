@@ -10,7 +10,8 @@ const DinoAdLibs = () => {
   
     const [isOpen, setIsOpen] = useState(true);
     const [isOpen2, setIsOpen2] = useState(true);
- 
+    const [dinoName, setDinoName] = useState('')
+    const [verb, setVerb] = useState('')
   
     function toggleModal1() {
         setIsOpen(!isOpen);
@@ -29,6 +30,21 @@ const DinoAdLibs = () => {
         setIsOpen(!isOpen); 
     }
 
+
+    const handleNameChange = (event) => {
+        setDinoName(event.target.value)
+    }
+
+    const handleBrandChange = (event) => {
+        setVerb(event.target.value)
+    }
+
+
+   function handleFormSubmit(event) {
+    event.preventDefault()
+
+    }
+
   
   return (
     <div>
@@ -42,12 +58,22 @@ const DinoAdLibs = () => {
         className="dino-modal-content"
       >
         <h3>Dino AdLibs From</h3>
-     <button type="button" onClick={toggleModal1} className="dino-modal-close-button" >
-      &times;
-      </button>
+        <form onSubmit={handleFormSubmit} className="adlib-form">
+    
+      <label htmlFor="dinoName">dinoName:</label>
+      <input type="text" id="dinoName" name="dinoName" value={dinoName} onChange={handleNameChange} />
+
+      <label htmlFor="verb">verb:</label>
+      <input type="text" id="verb" name="verb" value={verb} onChange={handleBrandChange} />
+
+        <button type="submit" onClick={handleSubmit} className="dino-modal-button" >
+        Submit Answers
+        </button>
+        </form>
+
       <br />
-      <button type="submit" onClick={handleSubmit} className="dino-modal-button" >
-    Give me another!
+      <button type="button" onClick={toggleModal1} className="dino-modal-close-button" >
+      &times;
       </button>
       <Modal isOpen={!isOpen2}
         onRequestClose={toggleModal2}
@@ -55,6 +81,7 @@ const DinoAdLibs = () => {
         className="dino-modal-content"
       >
         <h3>Dino AdLibs Final</h3>
+        <p>The was a man called {dinoName} </p>
      <button type="button" onClick={handleCloseAll} className="dino-modal-close-button" >
       &times;
       </button>
@@ -63,9 +90,6 @@ const DinoAdLibs = () => {
     Give me another!
       </button>
 
-      () => {
-        
-      }
      
       </Modal>
 
