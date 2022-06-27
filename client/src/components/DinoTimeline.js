@@ -9,6 +9,7 @@ const DinoTimeline = ({allDinosaurs}) => {
       cardDirection = "left";
     }
     return (
+
       <DinoCard
       dino={dino}
       key={dino._id}
