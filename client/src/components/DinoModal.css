@@ -26,52 +26,57 @@ font-family: 'Rubik Moonrocks', cursive; */
         
     }
    
-    .dino-modal-content {
-        display: flex;
-        flex-direction: column;
-        background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/01/19/30297/e677e440bb636b6f6d0b3e250e60e8f5.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        position: absolute;
-        top: 150px;
-        left: 25%;
-        /* right: 50%; */
-        height: 70%;
-        width: 50%;
-        min-height: auto;
-        min-width: 200px;
-        border: 3px solid #0e5573;
-        overflow: auto;
-        /* -webkit-overflow-scrolling: touch; */
-        border-radius: 4px;
-        outline: none;
-        padding: 0px 100px;
-        box-shadow: 2px 2px 7px #000000;
-          }
+            
+.dino-modal-close-button {
+    position: sticky;
+    width:50px;
+    height: 200px;
+    left: 100%;
+    top: 0px;
+    background-color: orange;
+    font-size: large;
+    font-family: 'Permanent Marker', cursive;
+    z-index: 1;
+}
+
+.dino-modal-content {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/01/19/30297/e677e440bb636b6f6d0b3e250e60e8f5.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 150px;
+    left: 25%;
+    /* right: 50%; */
+    height: 70%;
+    width: 50%;
+    min-height: 500px;
+    min-width: auto;
+    border: 3px solid #0e5573;
+    overflow: auto;
+    /* -webkit-overflow-scrolling: touch; */
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 2px 2px 7px #000000;
+}
 
 
 .dino-modal-image {
-    /* position: absolute; */
+    position: relative;
     width: 100%;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
     box-shadow: 2px 2px 5px #000000;
     filter: saturate(250%);
-}
-        
-.dino-modal-close-button {
-    position: absolute;
-    width:40px;
-    height: 40px;
-    right:0;
-    top: 0;
-    background-color: orange;
-    font-size: large;
-    font-family: 'Permanent Marker', cursive;;
+    margin: 0px 100px;
+    max-width: fit-content;
 }
 
+
 h3 {
+    position: relative;
     font-family: 'Bangers', cursive;
     color: #ffffff;
     font-size: 60px;
@@ -80,6 +85,7 @@ h3 {
 }
 
 .dino-modal-info {
+    position: relative;
     font-family: 'Architects Daughter', cursive;
     color: white;
     font-size: 30px;
@@ -89,6 +95,7 @@ h3 {
 }
 
 .dino-modal-map {
+    position: relative;
     padding-bottom: 40px;
     padding-top: 20px;
 }
