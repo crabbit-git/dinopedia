@@ -5,6 +5,8 @@ import './Navbar.css'
 import Search from './Search';
 import Player from './Audio';
 import Modal from "react-modal";
+import RandomFact from "./RandomFact";
+import CreatorsModal from "./CreatorsModal";
 
 const Navbar = ({allDinosaurs}) => {
 
@@ -27,7 +29,8 @@ const Navbar = ({allDinosaurs}) => {
       <div className="nav-items">
         {/* These li elements should probably be inside a ul: */}
         {/* <ul> */}
-          <li><a href="/" >Creators</a></li>
+          <RandomFact  />
+          <CreatorsModal />
           <li><a href="/">Favourite <img id="tiny-dino" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="tiny dino" /></a></li>
         {/* </ul> */}
       </div>

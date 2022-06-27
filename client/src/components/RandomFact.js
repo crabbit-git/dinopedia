@@ -6,15 +6,15 @@ import styles from "./LandingModal.css";
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
-const RandomFact = ({toggleModal}) => {
+const RandomFact = () => {
   
     const [isOpen, setIsOpen] = useState(true);
     const [rndmFact, setrndmFact] = useState("");
   
-  
     function toggleModal() {
-      setIsOpen(!isOpen);
-    }
+        setIsOpen(!isOpen);
+      }
+
   
     const listOfRandomFacts= [
       "Dinosaurs are a group of reptiles that have lived on Earth for about 245 million years.", 
@@ -38,11 +38,11 @@ const RandomFact = ({toggleModal}) => {
   
   
     const toggleRdmnFact = () => {
-      setrndmFact(randomFact)
-      if (rndmFact === "") {
-        setrndmFact(randomFact2)
-        return rndmFact
-      } else if (rndmFact ==! randomFact) {
+      setrndmFact(randomFact2)
+    //   if (rndmFact === "") {
+    //     setrndmFact(randomFact2)
+    //     return rndmFact
+      if (rndmFact ==! randomFact) {
         setrndmFact(randomFact)
         return rndmFact
       } else if (rndmFact ==! randomFact2) {
@@ -65,6 +65,7 @@ const RandomFact = ({toggleModal}) => {
       <i className="icon fa fa-home"/>
       <div className="content">
       </div>
+      <li><a href="javascript:void(0)" onClick={toggleModal} >RandomFact</a></li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal}
         contentLabel="modal"

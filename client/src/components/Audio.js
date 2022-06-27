@@ -33,7 +33,7 @@ const useAudio = url => {
 
 const Player = ({ url }) => {
   const [playing, toggle] = useAudio('https://www.nhm.ac.uk/content/dam/nhmwww/take-part/dippy-on-tour/jurassic-soundscape.mp3');
- 
+
 
   return (
 

@@ -75,11 +75,11 @@ p {
 .dino-modal-close-button {
     border: none;
     display: inline-block;
-    padding: 8px 16px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
+    color: white;
+    border: solid;
     background-color: inherit;
     text-align: center;
     cursor: pointer;
@@ -100,7 +100,7 @@ p {
     font-weight: 600;
     letter-spacing: -1px;
     margin-left: 60px;
-    margin-top: 50px;
+    border: 3px solid #0e5573;
 }
 
 h3 {
@@ -111,9 +111,44 @@ h3 {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: -1px;
-    margin-top: 70px;
 }
 
+.creator-div {
+    height: 70%;
+    /* width: 70%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.creator-profile {
+    border: 3px solid #0e5573;
+    height: 50%;
+    width: 50%;
+    background-color:  #171c24;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    /* justify-content: center; */
+    
+}
+
+.creator-name {
+    font-size: large;
+}
+
+.creator-picture {
+    height: 40%;
+    width: 40%;
+
+}
+
+.creator-links {
+    font-size: large;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 
