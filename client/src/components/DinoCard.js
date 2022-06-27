@@ -28,7 +28,7 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
         <div className="date">{dino.period}</div>
         <i className="icon"/>
         <div className="content">
-        <div id="styledimg"></div>
+        {/* <div id="styledimg"></div> */}
 
           <img
             onClick={toggleModal}
@@ -37,7 +37,8 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
             alt={dino.name}
           />
           <h2>{dino.name}</h2>
-          {/* <button id="fav-button" >Add to favourites</button> */}
+          <button id="fav-button" >Add to favourites</button>
+          <img className="star" src="https://toppng.com/uploads/preview/5-point-stars-png-star-icon-flat-11562958768wpf63hu4tq.png" alt="" />
         </div>
       </div>
       <Modal isOpen={isOpen}

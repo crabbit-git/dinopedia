@@ -39,7 +39,6 @@ body {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  /* padding: 15px 0; */
   /* border: red 5px solid; */
 }
 
@@ -49,7 +48,6 @@ body {
   position: absolute;
   width:7px;
   background: #0e5573;
-  /* background-image: linear-gradient(#0e5573, yellow); */
   top: 0;
   bottom: 0;
   left: 50%;
@@ -308,4 +306,14 @@ width: 200px;
   max-width: 100%;
   max-height: 100%;
   object-fit: fill;
+  }
+
+  .star {
+    background-color: red;
+    max-height: 100%;
+	max-width: 100%;
+	width:50px;
+	height:50px;
+	background-size: cover;
+  background-repeat: no-repeat;
   }
