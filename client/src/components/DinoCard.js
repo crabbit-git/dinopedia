@@ -12,6 +12,10 @@ const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRem
   const mapClass = `https://dinosaurpictures.org/${dino.mapUrl}`
 
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(true)
+  
+
+
 
   function toggleModal() {
     setIsOpen(!isOpen);
@@ -46,7 +50,7 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
             src={dino.pics[2].url}
             alt={dino.name}
           />
-          <h2>{dino.name}</h2>
+          <h2 >{dino.name}</h2>
           <button onClick={handleFavButtonClick} className="fav-button">
             {toggleStar}
           </button>
@@ -61,8 +65,9 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
       <button className="dino-modal-close-button"
         onClick={toggleModal} type="button"> X 
       </button>
-        
-            <h3>{dino.name}</h3>
+        <div className="dino-modal-inner">
+
+            <h3 className="dino-modal-name">{dino.name}</h3>
 
           <div className="dino-modal-image-div">
             <img className="dino-modal-image"
@@ -70,22 +75,26 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
                 alt={dino.name}
             />
           </div>
-        <div className="dino-modal-info">
-        <button onClick={handleFavButtonClick} className="fav-button">
-            {toggleStar}
-          </button>
-            <b>Period:</b> {dino.period}
-            <br />
-            <b>Diet:</b> {dino.eats}
-            <br/>
-            <b>Found in:</b> {dino.regions.join(", ")}
-            <br/>
+          <div className="dino-modal-info-div">
+              <div className="dino-modal-info">
+                <button onClick={handleFavButtonClick} className="fav-button">
+              {toggleStar}
+                 </button>
+            
+              <div>
+                <b>Period:</b> {dino.period}
+                <br />
+                <b>Diet:</b> {dino.eats}
+                <br/>
+                <b>Remains found:</b> {dino.regions.join(", ")}
+                <br/>
+              </div>
+              <img className="dino-modal-map" src={mapClass} alt="" />
+              </div>
+           
+          </div>
         </div>
 
-          <div className="dino-modal-map">
-            <img src={mapClass} alt="" />
-
-          </div>
       </Modal>
     </div>
 

@@ -42,6 +42,7 @@ const stripDinos = dinosFromApi => {
       dino.pics[2].url = "https://ichef.bbci.co.uk/images/ic/640x360/p0bzpk6z.jpg";
     }
     if(dino.name === "Camposaurus"){
+      dino.mapUrl = "https://osm.org/go/Tw4N--?m="
       dino.pics[2].url =  "http://images.dinosaurpictures.org/Camposaurus_799e.jpg";
     }
     if(dino.name === "Brachiosaurus"){

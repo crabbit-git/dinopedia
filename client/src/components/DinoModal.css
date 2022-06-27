@@ -29,13 +29,16 @@ font-family: 'Rubik Moonrocks', cursive; */
             
 .dino-modal-close-button {
     position: sticky;
-    width:50px;
-    height: 200px;
-    left: 100%;
-    top: 0px;
+    width:30px;
+    height:30px;
+    left: 94%;
+    top: 15px;
     background-color: orange;
     font-size: large;
     font-family: 'Permanent Marker', cursive;
+    color: #0e5573;
+    border-radius: 0px 10px 5px 10px;
+    border: #0e5573 2px solid;
     z-index: 1;
 }
 
@@ -49,23 +52,46 @@ font-family: 'Rubik Moonrocks', cursive; */
     position: absolute;
     top: 150px;
     left: 25%;
-    /* right: 50%; */
-    height: 70%;
+    right: inherit;
+    
+    height:800px ;
     width: 50%;
-    min-height: 500px;
-    min-width: auto;
+    min-height: 1000px;
+    max-height: 1000px;
+    min-width: 860px;
+    max-width: 860px;
     border: 3px solid #0e5573;
     overflow: auto;
     /* -webkit-overflow-scrolling: touch; */
-    border-radius: 4px;
+    border-radius: 0px 50px 30px 50px;
     outline: none;
     box-shadow: 2px 2px 7px #000000;
 }
+.dino-modal-inner{
+    width: 800px;
+    min-width: 600px;
+    height: 900px;
+    padding: 20px 20px;
+    margin: 25px;
+    /* background-image: linear-gradient( #0e5573, #073346); */
+    background-color:#0e557379;
+    border-radius: 0px 50px 30px 50px;
+    
+}
 
+
+
+
+.dino-modal-image-div{
+    position: relative;
+    width: 75%;
+    height: 400px;
+}
 
 .dino-modal-image {
     position: relative;
-    width: 100%;
+    width: auto;
+    height: 400px;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
     box-shadow: 2px 2px 5px #000000;
@@ -75,8 +101,9 @@ font-family: 'Rubik Moonrocks', cursive; */
 }
 
 
-h3 {
+.dino-modal-name {
     position: relative;
+    margin: 2px;
     font-family: 'Bangers', cursive;
     color: #ffffff;
     font-size: 60px;
@@ -84,19 +111,38 @@ h3 {
     text-shadow: 2px 2px 3px #000000;
 }
 
+.dino-modal-info-div{
+    position: relative;
+    /* width: 800px;
+    min-width: 600px;
+    height: 400px;
+    padding: 20px 20px;
+    margin: 25px;
+    background-image: linear-gradient( #0e5573, #073346);
+    border-radius: 0px 50px 30px 50px; */
+}
+
 .dino-modal-info {
     position: relative;
+    display: flex;
+    flex-direction: row;
     font-family: 'Architects Daughter', cursive;
     color: white;
     font-size: 30px;
+    /* width: 75%;
+    height: 400px;
     padding: 20px 20px;
+    margin: 10px;
     background-image: linear-gradient( #0e5573, #073346);
-    border-radius: 0px 50px 30px 50px;
+    border-radius: 0px 50px 30px 50px; */
 }
 
 .dino-modal-map {
-    position: relative;
-    padding-bottom: 40px;
-    padding-top: 20px;
+  
+    margin: 10px;
+    border: #0e5573 8px solid;
+    border-radius: 0px 50px 30px 50px;
+    box-shadow: 2px 2px 5px #000000;
+   
 }
 
