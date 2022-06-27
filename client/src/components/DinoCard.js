@@ -53,10 +53,6 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
           <button onClick={handleFavButtonClick} id="fav-button">
             {toggleStar}
 
-            {/* <FontAwesomeIcon icon="fa-regular fa-star-sharp" />
-            <FontAwesomeIcon icon="fa-solid fa-star-sharp" /> */}
-
-
           </button>
         </div>
       </div>

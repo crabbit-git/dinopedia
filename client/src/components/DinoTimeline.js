@@ -6,10 +6,9 @@ const DinoTimeline = ({allDinosaurs, handleAddFavDino, handleRemoveFavDino, favD
     let periodClass = dino.period;
     let cardDirection = "right"
     let isFavourite = favDinosaurs.some((favDino)=>{
-     
         return favDino._id === dino._id
-        
     })
+
     if (allDinosaurs.indexOf(dino) %2 === 0) {
       cardDirection = "left";
     }

@@ -20,18 +20,15 @@ function App() {
 
   // [...favDinosaurs] SPREAD OPERATOR
 const handleAddFavDino = (dinoId) => {
-  
   const foundFavDino = allDinosaurs.find((dinosaur) => {
     return dinosaur._id === dinoId
-
   }) //comparing the object to the string
-
   setFavDinosaurs([...favDinosaurs, foundFavDino])
 }
 
 const handleRemoveFavDino = (dinoId) => {
   const filteredFavDinos = favDinosaurs.filter((favDinosaur) => {
-    return favDinosaur._id !== dinoId //if this isnt the dinosaur to be removed, u passed the filter
+    return favDinosaur._id !== dinoId //if this isnt the dinosaur to be removed, its has passed the filter
   })
   setFavDinosaurs(filteredFavDinos)
   // console.log(filteredFavDinos);
@@ -67,10 +64,11 @@ const handleRemoveFavDino = (dinoId) => {
           path="/"
           element={<DinoTimeline allDinosaurs={allDinosaurs} handleAddFavDino={handleAddFavDino} handleRemoveFavDino={handleRemoveFavDino} favDinosaurs={favDinosaurs}/>}
         />
-        {/* <Route
+        <Route
           path="/favourites"
-          element={<DinoTimeline allDinosaurs={favDinosaurs}/>}
-        /> */}
+          element={<DinoTimeline allDinosaurs={favDinosaurs} handleAddFavDino={handleAddFavDino} handleRemoveFavDino={handleRemoveFavDino} favDinosaurs={favDinosaurs}/>}
+          // element={<DinoTimeline favDinosaurs={favDinosaurs}/>}
+        />
       </Routes>
     </BrowserRouter>
   );
