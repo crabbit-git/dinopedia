@@ -3,15 +3,15 @@ import DinoCard from "./DinoCard";
 const DinoTimeline = (
   {allDinosaurs, handleAddFavDino, handleRemoveFavDino, favDinosaurs}
 ) => {
-
   const renderDinos = () =>
     [...allDinosaurs]
     .sort((a,b) => a.name.localeCompare(b.name))
     .sort((a,b) => b.era.localeCompare(a.era))
     .map((dino, index) => {
+
     const periodClass = dino.period;
     let cardDirection = "right"
-    let isFavourite = favDinosaurs.some(favDino=>{
+    let isFavourite = favDinosaurs.some(favDino => {
         return favDino._id === dino._id
     });
 
@@ -30,7 +30,7 @@ const DinoTimeline = (
         isFavourite={isFavourite}
       />
     );
-  })
+  });
 
   return (
     <div className="timeline-container">
