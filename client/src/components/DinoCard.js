@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Styles } from "react-modal";
 import styles from "./DinoModal.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+// import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
-const DinoCard = ({dino, cardDirection, periodClass}) => {
+const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRemoveFavDino, isFavourite}) => {
   const containerClass = `container ${cardDirection}`;
   const timelineClass = `timeline ${periodClass}`
   const mapClass = `https://dinosaurpictures.org/${dino.mapUrl}`
@@ -16,10 +19,21 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
   function toggleModal() {
     setIsOpen(!isOpen);
   }
+  
+  // const isToggled =() => setIsClicked( !isFavourite)
+  const handleFavButtonClick = () => {
+    if(isFavourite) {
+      handleRemoveFavDino(dino._id) 
+    } else {
+      handleAddFavDino(dino._id)
+    }
+  }
+  
 
-
-
-
+// const [isClicked, setIsClicked] = useState(false)
+// const starOn = <FontAwesomeIcon icon ={faStar} className="star-class-on"/>
+// const starOff = <FontAwesomeIcon icon ={faStar} className="star-class-off"/>
+const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star-class-on" : "star-class-off"}/>
 
   return (
 
@@ -28,7 +42,6 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
         <div className="date">{dino.period}</div>
         <i className="icon"/>
         <div className="content">
-        {/* <div id="styledimg"></div> */}
 
           <img
             onClick={toggleModal}
@@ -37,8 +50,14 @@ const DinoCard = ({dino, cardDirection, periodClass}) => {
             alt={dino.name}
           />
           <h2>{dino.name}</h2>
-          <button id="fav-button" >Add to favourites</button>
-          <img className="star" src="https://toppng.com/uploads/preview/5-point-stars-png-star-icon-flat-11562958768wpf63hu4tq.png" alt="" />
+          <button onClick={handleFavButtonClick} id="fav-button">
+            {toggleStar}
+
+            {/* <FontAwesomeIcon icon="fa-regular fa-star-sharp" />
+            <FontAwesomeIcon icon="fa-solid fa-star-sharp" /> */}
+
+
+          </button>
         </div>
       </div>
       <Modal isOpen={isOpen}

@@ -9,7 +9,6 @@ function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
   const [favDinosaurs, setFavDinosaurs] = useState([]);
 
-  // [...favDinosaurs]
 
   useEffect(() => {
     fetch('http://localhost:5000/api/dinosaurs/')
@@ -17,16 +16,43 @@ function App() {
     .then(data => setAllDinosaurs(data))
   }, []);
 
-  useEffect(() => {
-    // let tempFavs = [];
-    const savedFavs = window.localStorage.getItem('favDinoNames');
-    if (savedFavs) {
-      // tempFavs = savedFavs
-      setFavDinosaurs(
-        allDinosaurs.filter(dino => savedFavs.includes(dino.name.toLowerCase()))
-      );
-    }
-  }, [allDinosaurs]);
+
+
+  // [...favDinosaurs] SPREAD OPERATOR
+const handleAddFavDino = (dinoId) => {
+  
+  const foundFavDino = allDinosaurs.find((dinosaur) => {
+    return dinosaur._id === dinoId
+
+  }) //comparing the object to the string
+
+  setFavDinosaurs([...favDinosaurs, foundFavDino])
+}
+
+const handleRemoveFavDino = (dinoId) => {
+  const filteredFavDinos = favDinosaurs.filter((favDinosaur) => {
+    return favDinosaur._id !== dinoId //if this isnt the dinosaur to be removed, u passed the filter
+  })
+  setFavDinosaurs(filteredFavDinos)
+  // console.log(filteredFavDinos);
+}
+// console.log("all dinos",allDinosaurs);
+
+
+
+
+
+
+  // useEffect(() => {
+  //   // let tempFavs = [];
+  //   const savedFavs = window.localStorage.getItem('favDinoNames');
+  //   if (savedFavs) {
+  //     // tempFavs = savedFavs
+  //     setFavDinosaurs(
+  //       allDinosaurs.filter(dino => savedFavs.includes(dino.name.toLowerCase()))
+  //     );
+  //   }
+  // }, [allDinosaurs]);
 
   // useEffect(() => {
     
@@ -39,12 +65,12 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<DinoTimeline allDinosaurs={allDinosaurs}/>}
+          element={<DinoTimeline allDinosaurs={allDinosaurs} handleAddFavDino={handleAddFavDino} handleRemoveFavDino={handleRemoveFavDino} favDinosaurs={favDinosaurs}/>}
         />
-        <Route
+        {/* <Route
           path="/favourites"
           element={<DinoTimeline allDinosaurs={favDinosaurs}/>}
-        />
+        /> */}
       </Routes>
     </BrowserRouter>
   );
