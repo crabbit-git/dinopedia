@@ -3,9 +3,6 @@ import { Styles } from "react-modal";
 import styles from "./DinoModal.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-// import { faStar } from '@fortawesome/free-regular-svg-icons';
-
-
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
@@ -50,10 +47,10 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
             alt={dino.name}
           />
           <h2>{dino.name}</h2>
-          <button onClick={handleFavButtonClick} id="fav-button">
+          <button onClick={handleFavButtonClick} className="fav-button">
             {toggleStar}
-
           </button>
+
         </div>
       </div>
       <Modal isOpen={isOpen}
@@ -74,6 +71,9 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
             />
           </div>
         <div className="dino-modal-info">
+        <button onClick={handleFavButtonClick} className="fav-button">
+            {toggleStar}
+          </button>
             <b>Period:</b> {dino.period}
             <br />
             <b>Diet:</b> {dino.eats}

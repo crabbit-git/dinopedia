@@ -310,7 +310,7 @@ width: 200px;
 
 
 
-  #fav-button {
+  .fav-button {
     background: transparent;
     border: none;
     font-size: 50px;
