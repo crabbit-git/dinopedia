@@ -140,7 +140,7 @@ font-family: 'Rubik Moonrocks', cursive; */
 .dino-modal-map {
   
     margin: 10px;
-    border: #0e5573 8px solid;
+    /* border: #0e5573 8px solid; */
     border-radius: 0px 50px 30px 50px;
     box-shadow: 2px 2px 5px #000000;
    

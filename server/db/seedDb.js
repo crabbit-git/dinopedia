@@ -4,6 +4,7 @@ const {MongoClient} = require('mongodb');
 const dinoNames = [
   'Allosaurus',
   'Agnosphitys',
+  "Ankylosaurus",
   'Apatosaurus',
   'Attenborosaurus',
   'Blikanasaurus',
