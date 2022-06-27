@@ -24,6 +24,7 @@ font-family: 'Rubik Moonrocks', cursive; */
     
     .ReactModal__Overlay--before-close{
         opacity: 0;
+        transition:  opacity 1500ms ease-in;
         
     }
    
@@ -53,39 +54,64 @@ font-family: 'Rubik Moonrocks', cursive; */
 
 .dino-modal-image {
     /* position: absolute; */
-    width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content:  center;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
+    margin-left: 60px;
     
 }
         
 p {
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: 20px;
     text-align: center;
     text-shadow: 2px 2px 3px #000000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
 .dino-modal-close-button {
-    width: 200px;
-    height: 80px;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+.dino-modal-button {
+    width: 80%;
+    height: 70px;
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
     background-color: #171c24;
-    color: white;
     background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
     background-repeat: no-repeat;
     background-size: auto 70px;
     padding-left: 40px;
-    font-size:x-large;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-left: 60px;
+    margin-top: 50px;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: 40px;
     text-align: center;
     text-shadow: 2px 2px 3px #000000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 70px;
 }
 
 
