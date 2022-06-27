@@ -7,6 +7,7 @@ import Player from './Audio';
 import Modal from "react-modal";
 import RandomFact from "./RandomFact";
 import CreatorsModal from "./CreatorsModal";
+import DinoAdLibs from "./DinoAdLib";
 
 const Navbar = ({allDinosaurs}) => {
 
@@ -31,6 +32,7 @@ const Navbar = ({allDinosaurs}) => {
         {/* <ul> */}
           <RandomFact  />
           <CreatorsModal />
+          <DinoAdLibs />
           <li><a href="/">Favourite <img id="tiny-dino" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="tiny dino" /></a></li>
         {/* </ul> */}
       </div>
