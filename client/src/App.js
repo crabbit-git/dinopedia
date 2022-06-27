@@ -2,6 +2,8 @@ import {useEffect, useState} from 'react';
 import './App.css';
 import DinoTimeline from './components/DinoTimeline';
 import Navbar from './components/Navbar';
+import LandingModal from './components/LandingModal';
+
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <div>
+      <LandingModal />
       <Navbar allDinosaurs={allDinosaurs}/>
       <h1>Butts</h1>
       <DinoTimeline allDinosaurs={allDinosaurs}/>
@@ -23,3 +26,5 @@ function App() {
 }
 
 export default App;
+
+

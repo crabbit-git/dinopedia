@@ -38,7 +38,7 @@ const Player = ({ url }) => {
   return (
 
       <div>
-        <img onClick={toggle} id="logo-pic" src="https://play-lh.googleusercontent.com/6gpx0U7xAp2OBnW8EswCwC_xtUiP9FaZk-z0D2dRVcJiFv-bKBN_Ui4uecMwNmaD7a4" alt="dino logo"/> 
+        <img onClick={toggle} id="logo-pic" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="dino logo"/> 
         {playing}
       </div>
   
