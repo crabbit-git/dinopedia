@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
+  const [hasLoadedAllDinosaurs, setHasLoadedAllDinosaurs] = useState(false);
   const [favDinosaurs, setFavDinosaurs] = useState([]);
   const savedFavs = window.localStorage.getItem('favDinoNames');
 
@@ -13,7 +14,10 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:5000/api/dinosaurs/')
     .then(res => res.json())
-    .then(data => setAllDinosaurs(data));
+    .then(data => {
+      setAllDinosaurs(data);
+      setHasLoadedAllDinosaurs(true);
+    });
     console.log(
       `User has saved the following dinosaurs as favourites: ${savedFavs}`
     );
@@ -32,7 +36,7 @@ function App() {
   // If list of favourite dinosaurs (JSON) changes state, check if it's empty,
   // and if it isn't, write all of its dinosaur names to localStorage:
   useEffect(() => {
-    if (favDinosaurs.length !== 0) {
+    if (hasLoadedAllDinosaurs === true) {
       window.localStorage.setItem(
         'favDinoNames',
         JSON.stringify(favDinosaurs.map(dino => dino.name))
@@ -40,7 +44,6 @@ function App() {
     }
   }, [favDinosaurs]);
 
-  // [...favDinosaurs] SPREAD OPERATOR
   const handleAddFavDino = dinoId => {
     const foundFavDino = allDinosaurs.find(dinosaur => {
       return dinosaur._id === dinoId // comparing the ID object to the ID string
