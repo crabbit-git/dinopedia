@@ -71,11 +71,11 @@ const RandomFact = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
-        <h3>Random Fact</h3>
-        <p>{rndmFact}</p>
-     <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
+        <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
       &times;
       </button>
+        <h3>Random Fact</h3>
+        <p>{rndmFact}</p>
       <br />
       <button type="button" onClick={toggleRdmnFact}  className="landing-modal-button" >
     Give me another!

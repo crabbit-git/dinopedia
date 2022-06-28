@@ -75,6 +75,9 @@ const DinoAdLibs = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
+         <button type="button" onClick={toggleModal1} className="landing-modal-close-button" >
+      &times;
+      </button>
         <h3>Dino AdLibs From</h3>
         <form onSubmit={handleFormSubmit} className="adlib-form">
     
@@ -99,14 +102,15 @@ const DinoAdLibs = () => {
         </form>
 
       <br />
-      <button type="button" onClick={toggleModal1} className="landing-modal-close-button" >
-      &times;
-      </button>
+     
       <Modal isOpen={!isOpen2}
         onRequestClose={toggleModal2}
         contentLabel="modal"
         className="landing-modal-content"
       >
+          <button type="button"  onClick={handleCloseAll} className="landing-modal-close-button" >
+      &times;
+      </button>
         <h3>Dino AdLibs Final</h3>
         <p>There once was a dinosaur called {dinoName} who lived in the triassic period and mainly ate
         {noun}.  {dinoName} was wiped out with the rest of the dinosaurs by a 
@@ -115,9 +119,7 @@ const DinoAdLibs = () => {
         {noun2} called Chicxulub slammed into the waters off what is now Mexico, triggering a 
         {Adjective} extinction that killed off more than 75 percent of Earth's species. No wait that is
          not right??? If you really want ot know what happened to {dinoName} click {here} </p>
-     <button type="button"  onClick={handleCloseAll} className="landing-modal-close-button" >
-      &times;
-      </button>
+   
       <br />
       <button type="button" onClick={handleCloseAll}  className="landing-modal-button" >
         back to Dinopedia

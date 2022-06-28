@@ -44,13 +44,13 @@ Modal.setAppElement("#root");
             contentLabel="modal"
             className="landing-modal-content"
           >
+          <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
+          &times;
+          </button>
             <h3>This is team Dinomite</h3>
             <div className="creator-div" >
                {creatorProfile}
             </div>
-          <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
-          &times;
-          </button>
           <br />
           <button type="button" onClick={toggleModal}  className="landing-modal-button" >
         back to Dinopedia
