@@ -28,7 +28,7 @@ const Search = ({allDinosaurs}) => {
     submit.preventDefault();
     const searchValue = document.querySelector('#background-input').value;
 		if(!searchValue) {
-			console.error('no match found or no value provided');
+      alert('No match found or no search query provided. Please try again!');
 			return;
 		}
 		const selectedNode = document.getElementById(searchValue);
