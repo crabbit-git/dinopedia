@@ -1,6 +1,9 @@
 
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
+
+
+  
   #navbarr{
     font-family: 'Montserrat', sans-serif;
     background: #171c24;
@@ -31,7 +34,6 @@
   }
     #logo-pic{
     max-height: 70px;
-    border-style: solid;
     margin-right: 40px;
     color: #fff;
     font-size: 30px;

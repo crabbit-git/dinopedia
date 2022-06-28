@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import DinoTimeline from './components/DinoTimeline';
 import Navbar from './components/Navbar';
+import LandingModal from './components/LandingModal';
 
 function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <LandingModal />
       <Navbar allDinosaurs={allDinosaurs}/>
       <h1>Butts</h1>
       <Routes>
@@ -91,3 +93,5 @@ function App() {
 }
 
 export default App;
+
+
