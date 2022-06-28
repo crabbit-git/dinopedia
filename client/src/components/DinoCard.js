@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-// import { Styles } from "react-modal";
-// import styles from "./DinoModal.css";
+import { Styles } from "react-modal";
+import styles from "./DinoModal.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Modal from "react-modal";
