@@ -4,7 +4,7 @@ import './App.css';
 import DinoTimeline from './components/DinoTimeline';
 import Navbar from './components/Navbar';
 import LandingModal from './components/LandingModal';
-
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
@@ -64,6 +64,7 @@ function App() {
     <BrowserRouter>
       <LandingModal />
       <Navbar allDinosaurs={allDinosaurs}/>
+      <ScrollToTop/>
       {/* <h1>Butts</h1> */}
       <Routes>
         <Route

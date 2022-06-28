@@ -69,7 +69,7 @@ const DinoAdLibs = () => {
       <i className="icon fa fa-home"/>
       <div className="content">
       </div>
-      <li><a href="javascript:void(0)" onClick={toggleModal1} >AdLib</a></li>
+      <li><a href="javascript:void(0)" onClick={toggleModal1} >Story Time</a></li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal1}
         contentLabel="modal"

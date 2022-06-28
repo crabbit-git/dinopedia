@@ -1,0 +1,18 @@
+.up-arrow-button  {
+    position: fixed;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: rgb(238, 173, 53);
+    bottom: 10px;
+    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
+}
+
+.opacity0 {
+    opacity: 0%;
+}
+
+.opacity100 {
+    opacity: 100%;
+}
