@@ -1,83 +1,153 @@
+/* fonts imported */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@100;300;400;600&family=Permanent+Marker&family=Righteous&family=Rubik+Moonrocks&display=swap');
 
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
+
+  /* entire black navbar */
+  .navbarr{
+    background-image: linear-gradient( #073346, #031d27);
+    position: fixed;
+    display: flex;
+    /* overflow: hidden; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    min-height: max-content;
+    /* height: auto; */
+    padding-right: 80px;
+    top: 0;
+    /* transform: translateY(-31%); */
+    width: 100%;
+    height: 11%;
+    z-index: 2;
+    /* border: red 2px solid; */
+  }
+
+
+
+.navbarr .logo-and-name{
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+  /* border: rgb(219, 26, 249) 3px solid; */
+}
+
+/* dino logo little drawing */
+#logo-pic{
+  /* background-color: red; */
+  width: 70px;
+  /* object-fit: cover; */
+  }
+
+
+/* dinopedia text logo */
+.logo-name a{
+    list-style: none;
+    font-family: 'Bangers', cursive;
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    text-decoration: none;
+    padding-left: 10px;
+    /* border: violet 3px solid; */
+}
+
+.logo-name a:hover{
+   color: orange;
+   cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
+}
+
+
+
+
+#logo-pic:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 
 
   
-  #navbarr{
-    font-family: 'Montserrat', sans-serif;
-    background: #171c24;
+
+
+.tiny-dino {
+  max-height: 20px;
+  padding-left: 0px;
+  /* border: blue 2px solid; */
+}
+
+.nav-items{
     display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    padding: 0 100px;
-    position: fixed;
-    transform: translateY(-31%);
-    width: 100%;
-    z-index: 100;
-  }
-
-  #tiny-dino {
-    max-height: 18px;
-    padding-left: 10px;
-  }
-
-  nav .logo{
-    color: #fff;
-    font-size: 30px;
-    font-weight: 600;
-    margin-right: 50px;
-    letter-spacing: -1px;
-  }
-    #logo-pic{
-    max-height: 70px;
-    margin-right: 40px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    }
-    #logo-pic:hover{
-      border-radius: 100%;
-      background-color: #ff3d00;
+    /* flex: 1; */
+    /* padding: 0 0 0 40px; */
+    /* border: purple 2px solid; */
+    /* font-size: 50px; */
     }
 
-   
-  nav .nav-items{
-    display: flex;
-    flex: 1;
-    padding: 0 0 0 40px;
-  }
-  nav .nav-items li{
-    margin-left: 50px;
-    margin-right: 20px;
+
+.nav-items li{
+    /* margin-left: 50px; */
+    /* margin-right: 20px; */
     list-style: none;
     padding: 0 15px;
   }
-  nav .nav-items li a{
+
+/* text links on page */
+  .nav-items a{
+    font-family: 'Architects Daughter', cursive;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    word-spacing: -2px;
+    font-weight: 700;
     text-decoration: none;
   }
-  nav .nav-items li a:hover{
-    color: #ff3d00;
+  
+  /* text links on page on hover*/
+  .nav-items a:hover{
+    color: orange;
+    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
   }
 
-  nav .menu-icon span,
+
+  /* what are these reffering to????  */
+  /* nav .menu-icon span,
   nav .cancel-icon,
   nav .search-icon{
     display: none;
+  } */
+  
+/* 
+  nav .logo.space{
+    color: greenyellow;
+    padding: 0 5px 0 5px;
   }
+ */
+
+
+
+/*   
   @media (max-width: 1245px) {
     nav{
       padding: 0 50px;
     }
-  }
-  @media (max-width: 1140px){
+  } */
+  /* @media (max-width: 1140px){
     nav{
       padding: 0px;
     }
@@ -123,13 +193,9 @@
     nav .cancel-icon.show{
       display: block;
     }
-  }
+  } */
 
-  nav .logo.space{
-    color: red;
-    padding: 0 5px 0 0;
-  }
-  @media (max-width: 980px){
+  /* @media (max-width: 980px){
     nav .menu-icon,
     nav .cancel-icon,
     nav .search-icon{
@@ -146,4 +212,4 @@
       margin: 0 10px;
       font-size: 16px;
     }
-  }
+  } */

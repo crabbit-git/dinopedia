@@ -65,7 +65,7 @@ const RandomFact = () => {
       <i className="icon fa fa-home"/>
       <div className="content">
       </div>
-      <li><a href="javascript:void(0)" onClick={toggleModal} >RandomFact</a></li>
+      <li><a href="javascript:void(0)" onClick={toggleModal} >Did you know?</a></li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal}
         contentLabel="modal"

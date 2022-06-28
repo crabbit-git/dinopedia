@@ -44,7 +44,7 @@ const Search = ({allDinosaurs}) => {
     <div id="search-div">
       <form id="search-form" autoComplete="off" onSubmit={handleSearch}>
         <input type="search" name="q" id="background-input" />
-        <input type="search" id="search" placeholder="Search for a dinosaur!" />
+        <input type="search" id="search" placeholder="Search for a dinosaur" />
         <button type="submit" id="go" value="Go!">Go!</button>
       </form>
     </div>

@@ -75,13 +75,13 @@ const DinoAdLibs = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
-        <h3>Dino AdLibs From</h3>
+        <h3>Dino AdLibs Form</h3>
         <form onSubmit={handleFormSubmit} className="adlib-form">
     
-      <label htmlFor="dinoName">dinoName:</label>
+      <label htmlFor="dinoName">Dinosaur Name:</label>
       <input type="text" id="dinoName" name="dinoName" value={dinoName} onChange={handleDinoNameChange} />
 
-      <label htmlFor="verb">A Verb or doing word:</label>
+      <label htmlFor="verb">A verb or doing word:</label>
       <input type="text" id="verb" name="verb" value={verb} onChange={handleVerbChange} />
 
       <label htmlFor="noun">A noun or naming word:</label>
@@ -90,7 +90,7 @@ const DinoAdLibs = () => {
       <label htmlFor="noun2">Another noun or naming word:</label>
       <input type="text" id="noun2" name="noun2" value={noun2} onChange={handleNoun2Change} />
 
-      <label htmlFor="Adjective">An Adjective or describing word:</label>
+      <label htmlFor="Adjective">An adjective or describing word:</label>
       <input type="text" id="Adjective" name="Adjective" value={Adjective} onChange={handleAdjectiveChange} />
 
         <button type="submit" onClick={handleSubmit} className="landing-modal-button" >
