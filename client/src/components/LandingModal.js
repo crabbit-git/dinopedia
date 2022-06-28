@@ -53,7 +53,7 @@ const LandingModal = () => {
       <img className="landing-modal-image" src="https://codeclan.com/wp-content/uploads/2019/04/CodeClan-Logo-White-2019-01.png"/>
       <br />
       <button type="button" onClick={toggleModal}  className="landing-modal-button" >
-    Dinopedia
+    Continue to Dinopedia...
       </button>
 
       
