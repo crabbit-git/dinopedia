@@ -65,7 +65,6 @@ function App() {
       <LandingModal />
       <Navbar allDinosaurs={allDinosaurs}/>
       <ScrollToTop/>
-      {/* <h1>Butts</h1> */}
       <Routes>
         <Route
           path="/"
