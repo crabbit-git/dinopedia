@@ -12,10 +12,7 @@ const DinoCard = ({dino, cardDirection, handleAddFavDino, handleRemoveFavDino, i
   const mapClass = `https://dinosaurpictures.org/${dino.mapUrl}`
 
   const [isOpen, setIsOpen] = useState(false);
-  const [hidden, setHidden] = useState(true)
-  
-
-
+  const [hidden, setHidden] = useState(true); // What's this? Not being used?
 
   function toggleModal() {
     setIsOpen(!isOpen);
