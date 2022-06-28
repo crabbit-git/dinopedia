@@ -26,15 +26,13 @@ const Search = ({allDinosaurs}) => {
 
   const handleSearch = submit => {
     submit.preventDefault();
-    const searchValue = document.querySelector('#background-input').value;
+    const searchValue = document.querySelector('#background-input').value
+    .toLowerCase()
 		if(!searchValue) {
       alert('No match found or no search query provided. Please try again!');
 			return;
 		}
 		const selectedNode = document.getElementById(searchValue);
-		// if(!selectedNode) {
-		// 	console.error(`couldn't find node with ID: ${searchValue}`);
-		// }
 		console.log(`scrolling to ${searchValue} and resetting search box`);
 		selectedNode.scrollIntoView({
       behavior: "smooth", block: "center"
