@@ -12,6 +12,10 @@ const DinoAdLibs = () => {
     const [isOpen2, setIsOpen2] = useState(true);
     const [dinoName, setDinoName] = useState('')
     const [verb, setVerb] = useState('')
+    const [noun, setNoun] = useState('')
+    const [noun2, setNoun2] = useState('')
+    const [Adjective, setAdjective] = useState('')
+  
   
     function toggleModal1() {
         setIsOpen(!isOpen);
@@ -31,19 +35,33 @@ const DinoAdLibs = () => {
     }
 
 
-    const handleNameChange = (event) => {
+    const handleDinoNameChange = (event) => {
         setDinoName(event.target.value)
     }
 
-    const handleBrandChange = (event) => {
+    const handleVerbChange = (event) => {
         setVerb(event.target.value)
+    }
+    const handleNounChange = (event) => {
+        setNoun(event.target.value)
+    }
+    const handleNoun2Change = (event) => {
+        setNoun2(event.target.value)
+    }
+    const handleAdjectiveChange = (event) => {
+        setAdjective(event.target.value)
     }
 
 
    function handleFormSubmit(event) {
     event.preventDefault()
+    if (noun === "" ||  verb  === "" ||   noun  === "" ||  noun2    === "" || Adjective === "") {
+        alert("Please complete all fields");
+        handleCloseAll()
+        return false;
+    }}
 
-    }
+    const here =  <a href="https://www.nationalgeographic.com/science/article/dinosaur-killing-asteroid-most-likely-struck-in-spring#:~:text=The%20impact%20that%20ended%20the,75%20percent%20of%20Earth's%20species.">here.</a>
 
   
   return (
@@ -61,10 +79,19 @@ const DinoAdLibs = () => {
         <form onSubmit={handleFormSubmit} className="adlib-form">
     
       <label htmlFor="dinoName">dinoName:</label>
-      <input type="text" id="dinoName" name="dinoName" value={dinoName} onChange={handleNameChange} />
+      <input type="text" id="dinoName" name="dinoName" value={dinoName} onChange={handleDinoNameChange} />
 
-      <label htmlFor="verb">verb:</label>
-      <input type="text" id="verb" name="verb" value={verb} onChange={handleBrandChange} />
+      <label htmlFor="verb">A Verb or doing word:</label>
+      <input type="text" id="verb" name="verb" value={verb} onChange={handleVerbChange} />
+
+      <label htmlFor="noun">A noun or naming word:</label>
+      <input type="text" id="noun" name="noun" value={noun} onChange={handleNounChange} />
+
+      <label htmlFor="noun2">Another noun or naming word:</label>
+      <input type="text" id="noun2" name="noun2" value={noun2} onChange={handleNoun2Change} />
+
+      <label htmlFor="Adjective">An Adjective or describing word:</label>
+      <input type="text" id="Adjective" name="Adjective" value={Adjective} onChange={handleAdjectiveChange} />
 
         <button type="submit" onClick={handleSubmit} className="dino-modal-button" >
         Submit Answers
@@ -81,15 +108,20 @@ const DinoAdLibs = () => {
         className="dino-modal-content"
       >
         <h3>Dino AdLibs Final</h3>
-        <p>The was a man called {dinoName} </p>
-     <button type="button" onClick={handleCloseAll} className="dino-modal-close-button" >
+        <p>There once was a dinosaur called {dinoName} who lived in the triassic period and mainly ate
+        {noun}.  {dinoName} was wiped out with the rest of the dinosaurs by a 
+        {Adjective} {noun2} which struck Earth. The impact that ended the age of dinosaurs some 66 million 
+        years ago was the worst single day that life on Earth has ever endured. A six-mile-wide 
+        {noun2} called Chicxulub slammed into the waters off what is now Mexico, triggering a 
+        {Adjective} extinction that killed off more than 75 percent of Earth's species. No wait that is
+         not right??? If you really want ot know what happened to {dinoName} click {here} </p>
+     <button type="button"  onClick={handleCloseAll} className="dino-modal-close-button" >
       &times;
       </button>
       <br />
-      <button type="button" onClick={handleCloseAll} className="dino-modal-button" >
-    Give me another!
-      </button>
-
+      <button type="button" onClick={handleCloseAll}  className="dino-modal-button" >
+        back to Dinopedia
+          </button>
      
       </Modal>
 
