@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Styles } from "react-modal";
-import styles from "./DinoModal.css";
+// import { Styles } from "react-modal";
+// import styles from "./DinoModal.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
-const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRemoveFavDino, isFavourite}) => {
+const DinoCard = ({dino, cardDirection, handleAddFavDino, handleRemoveFavDino, isFavourite}) => {
   const containerClass = `container ${cardDirection}`;
-  const timelineClass = `timeline ${periodClass}`
+  const timelineClass = `timeline ${dino.period}`
   const mapClass = `https://dinosaurpictures.org/${dino.mapUrl}`
 
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,6 @@ const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRem
       handleAddFavDino(dino._id)
     }
   }
-  
 
 // const [isClicked, setIsClicked] = useState(false)
 // const starOn = <FontAwesomeIcon icon ={faStar} className="star-class-on"/>
@@ -33,13 +32,11 @@ const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRem
 const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star-class-on" : "star-class-off"}/>
 
   return (
-
     <div id={dino.name.toLowerCase()} className={timelineClass}>
       <div className={containerClass}>
         <div className="date">{dino.period}</div>
         <i className="icon"/>
         <div className="content">
-
           <img
             onClick={toggleModal}
             className="dino-image"
@@ -50,7 +47,6 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
           <button onClick={handleFavButtonClick} className="fav-button">
             {toggleStar}
           </button>
-
         </div>
       </div>
       <Modal isOpen={isOpen}
@@ -61,9 +57,7 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
       <button className="dino-modal-close-button"
         onClick={toggleModal} type="button"> X 
       </button>
-        
             <h3>{dino.name}</h3>
-
           <div className="dino-modal-image-div">
             <img className="dino-modal-image"
                 src={dino.pics[2].url}
@@ -81,15 +75,11 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
             <b>Found in:</b> {dino.regions.join(", ")}
             <br/>
         </div>
-
           <div className="dino-modal-map">
             <img src={mapClass} alt="" />
-
           </div>
       </Modal>
     </div>
-
-
   );
 }
 

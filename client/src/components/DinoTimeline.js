@@ -12,15 +12,12 @@ const DinoTimeline = (
       if (index %2 === 0) {
         cardDirection = "left";
       }
-      let isFavourite = favDinosaurs.some(favDino => {
-          return favDino._id === dino._id
-      });
+      let isFavourite = favDinosaurs.some(favDino => favDino._id === dino._id);
       return (
         <DinoCard
           dino={dino}
           key={dino._id}
           cardDirection={cardDirection}
-          periodClass={dino.period}
           handleAddFavDino={handleAddFavDino}
           handleRemoveFavDino={handleRemoveFavDino}
           isFavourite={isFavourite}
