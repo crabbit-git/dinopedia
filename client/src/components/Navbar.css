@@ -39,7 +39,13 @@
     font-size: 30px;
     font-weight: 600;
     letter-spacing: -1px;
-}
+    }
+    #logo-pic:hover{
+      border-radius: 100%;
+      background-color: #ff3d00;
+    }
+
+   
   nav .nav-items{
     display: flex;
     flex: 1;
