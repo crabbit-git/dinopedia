@@ -5,55 +5,58 @@ import DinoTimeline from './components/DinoTimeline';
 import Navbar from './components/Navbar';
 
 function App() {
-
   const [allDinosaurs, setAllDinosaurs] = useState([]);
+  const [hasLoadedAllDinosaurs, setHasLoadedAllDinosaurs] = useState(false);
   const [favDinosaurs, setFavDinosaurs] = useState([]);
+  const savedFavs = window.localStorage.getItem('favDinoNames');
 
-
+  // Load in dinosaurs from database at startup and render page
   useEffect(() => {
     fetch('http://localhost:5000/api/dinosaurs/')
     .then(res => res.json())
-    .then(data => setAllDinosaurs(data))
+    .then(data => {
+      setAllDinosaurs(data);
+      setHasLoadedAllDinosaurs(true);
+    });
+    console.log(
+      `User has saved the following dinosaurs as favourites: ${savedFavs}`
+    );
   }, []);
 
+  // When dinosaur list is populated, check for saved favourites in localStorage
+  // and if they exist, pull them into the application's favourites list:
+  useEffect(() => {
+    if (savedFavs) {
+      setFavDinosaurs(
+        allDinosaurs.filter(dino => savedFavs.includes(dino.name))
+      );
+    }
+  }, [allDinosaurs]);
 
+  // If list of favourite dinosaurs (JSON) changes state, check if it's empty,
+  // and if it isn't, write all of its dinosaur names to localStorage:
+  useEffect(() => {
+    if (hasLoadedAllDinosaurs === true) {
+      window.localStorage.setItem(
+        'favDinoNames',
+        JSON.stringify(favDinosaurs.map(dino => dino.name))
+      );
+    }
+  }, [favDinosaurs]);
 
-  // [...favDinosaurs] SPREAD OPERATOR
-const handleAddFavDino = (dinoId) => {
-  const foundFavDino = allDinosaurs.find((dinosaur) => {
-    return dinosaur._id === dinoId
-  }) //comparing the object to the string
-  setFavDinosaurs([...favDinosaurs, foundFavDino])
-}
+  const handleAddFavDino = dinoId => {
+    const foundFavDino = allDinosaurs.find(dinosaur => {
+      return dinosaur._id === dinoId // comparing the ID object to the ID string
+    });
+  setFavDinosaurs([...favDinosaurs, foundFavDino]);
+  }
 
-const handleRemoveFavDino = (dinoId) => {
-  const filteredFavDinos = favDinosaurs.filter((favDinosaur) => {
-    return favDinosaur._id !== dinoId //if this isnt the dinosaur to be removed, its has passed the filter
-  })
-  setFavDinosaurs(filteredFavDinos)
-  // console.log(filteredFavDinos);
-}
-// console.log("all dinos",allDinosaurs);
-
-
-
-
-
-
-  // useEffect(() => {
-  //   // let tempFavs = [];
-  //   const savedFavs = window.localStorage.getItem('favDinoNames');
-  //   if (savedFavs) {
-  //     // tempFavs = savedFavs
-  //     setFavDinosaurs(
-  //       allDinosaurs.filter(dino => savedFavs.includes(dino.name.toLowerCase()))
-  //     );
-  //   }
-  // }, [allDinosaurs]);
-
-  // useEffect(() => {
-    
-  // }, [favDinosaurs]);
+  const handleRemoveFavDino = dinoId => {
+    const filteredFavDinos = favDinosaurs.filter(favDinosaur => {
+      return favDinosaur._id !== dinoId
+    });
+  setFavDinosaurs(filteredFavDinos);
+  }
 
   return (
     <BrowserRouter>
@@ -62,12 +65,25 @@ const handleRemoveFavDino = (dinoId) => {
       <Routes>
         <Route
           path="/"
-          element={<DinoTimeline allDinosaurs={allDinosaurs} handleAddFavDino={handleAddFavDino} handleRemoveFavDino={handleRemoveFavDino} favDinosaurs={favDinosaurs}/>}
+          element={
+            <DinoTimeline
+              allDinosaurs={allDinosaurs}
+              handleAddFavDino={handleAddFavDino}
+              handleRemoveFavDino={handleRemoveFavDino}
+              favDinosaurs={favDinosaurs}
+            />
+          }
         />
         <Route
           path="/favourites"
-          element={<DinoTimeline allDinosaurs={favDinosaurs} handleAddFavDino={handleAddFavDino} handleRemoveFavDino={handleRemoveFavDino} favDinosaurs={favDinosaurs}/>}
-          // element={<DinoTimeline favDinosaurs={favDinosaurs}/>}
+          element={
+            <DinoTimeline
+              allDinosaurs={favDinosaurs}
+              handleAddFavDino={handleAddFavDino}
+              handleRemoveFavDino={handleRemoveFavDino}
+              favDinosaurs={favDinosaurs}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

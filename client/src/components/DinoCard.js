@@ -6,9 +6,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
-const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRemoveFavDino, isFavourite}) => {
+const DinoCard = ({dino, cardDirection, handleAddFavDino, handleRemoveFavDino, isFavourite}) => {
   const containerClass = `container ${cardDirection}`;
-  const timelineClass = `timeline ${periodClass}`
+  const timelineClass = `timeline ${dino.period}`
   const mapClass = `https://dinosaurpictures.org/${dino.mapUrl}`
 
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,6 @@ const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRem
       handleAddFavDino(dino._id)
     }
   }
-  
 
 // const [isClicked, setIsClicked] = useState(false)
 // const starOn = <FontAwesomeIcon icon ={faStar} className="star-class-on"/>
@@ -37,13 +36,11 @@ const DinoCard = ({dino, cardDirection, periodClass, handleAddFavDino, handleRem
 const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star-class-on" : "star-class-off"}/>
 
   return (
-
     <div id={dino.name.toLowerCase()} className={timelineClass}>
       <div className={containerClass}>
         <div className="date">{dino.period}</div>
         <i className="icon"/>
         <div className="content">
-
           <img
             onClick={toggleModal}
             className="dino-image"
@@ -54,7 +51,6 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
           <button onClick={handleFavButtonClick} className="fav-button">
             {toggleStar}
           </button>
-
         </div>
       </div>
       <Modal isOpen={isOpen}
@@ -94,11 +90,8 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
            
           </div>
         </div>
-
       </Modal>
     </div>
-
-
   );
 }
 
