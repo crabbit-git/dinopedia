@@ -5,6 +5,7 @@ import DinoTimeline from './components/DinoTimeline';
 import Navbar from './components/Navbar';
 import LandingModal from './components/LandingModal';
 
+
 function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
   const [hasLoadedAllDinosaurs, setHasLoadedAllDinosaurs] = useState(false);
@@ -63,7 +64,7 @@ function App() {
     <BrowserRouter>
       <LandingModal />
       <Navbar allDinosaurs={allDinosaurs}/>
-      <h1>Butts</h1>
+      {/* <h1>Butts</h1> */}
       <Routes>
         <Route
           path="/"

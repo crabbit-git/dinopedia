@@ -36,7 +36,9 @@ const Search = ({allDinosaurs}) => {
 		// 	console.error(`couldn't find node with ID: ${searchValue}`);
 		// }
 		console.log(`scrolling to ${searchValue} and resetting search box`);
-		selectedNode.scrollIntoView({behavior: 'smooth'});
+		selectedNode.scrollIntoView({
+      behavior: "smooth", block: "center"
+    });
     document.querySelector('#search-form').reset();
   }
 
