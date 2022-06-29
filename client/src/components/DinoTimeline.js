@@ -1,4 +1,4 @@
-import DinoCard from "./DinoCard";
+import DinoCard from './DinoCard';
 
 const DinoTimeline = (
   {allDinosaurs, favDinosaurs, handleAddFavDino, handleRemoveFavDino}
@@ -8,9 +8,9 @@ const DinoTimeline = (
     .sort((a,b) => a.name.localeCompare(b.name))
     .sort((a,b) => b.era.localeCompare(a.era))
     .map((dino, index) => {
-      let cardDirection = "right"
+      let cardDirection = 'right'
       if (index %2 === 0) {
-        cardDirection = "left";
+        cardDirection = 'left';
       }
       let isFavourite = favDinosaurs.some(favDino => favDino._id === dino._id);
       return (
@@ -26,7 +26,7 @@ const DinoTimeline = (
     });
 
   return (
-    <div className="timeline-container">
+    <div className='timeline-container'>
       {renderDinos()} 
     </div>
   );

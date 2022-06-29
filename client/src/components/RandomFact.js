@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { Styles } from "react-modal";
-import styles from "./LandingModal.css";
-import Modal from "react-modal";
+import React, { useState } from 'react';
+import '../static/LandingModal.css';
+import Modal from 'react-modal';
 
-Modal.setAppElement("#root");
+Modal.setAppElement('#root');
 
 const RandomFact = ({randomFacts}) => {
   
@@ -49,26 +48,26 @@ const RandomFact = ({randomFacts}) => {
   return (
     <div>
       <li>
-        <a href="javascript:void(0)" onClick={toggleModal}>
+        <a href='javascript:void(0)' onClick={toggleModal}>
           Did you know?
         </a>
       </li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal}
-        contentLabel="modal"
-        className="landing-modal-content"
+        contentLabel='modal'
+        className='landing-modal-content'
       >
-        <button type="button"
+        <button type='button'
         onClick={toggleModal}
-        className="landing-modal-close-button"
+        className='landing-modal-close-button'
         >
           &times;
         </button>
         <h3>Did you know...?</h3>
         <p>{fact}</p>
         <br />
-        <button type="button"
-          onClick={changeFact} className="landing-modal-button"
+        <button type='button'
+          onClick={changeFact} className='landing-modal-button'
         >
           Give me another!
         </button>

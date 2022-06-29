@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
-import './ScrollToTop.css'
+import '../static/ScrollToTop.css'
 
 export const ScrollToTop= () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ export const ScrollToTop= () => {
 
   return (
     <div className='scroll-to-top-button'> 
-      <button type='button' onClick={scrollToTop} className="up-arrow-button">
+      <button type='button' onClick={scrollToTop} className='up-arrow-button'>
         {upArrowButton}
       </button>
     </div>

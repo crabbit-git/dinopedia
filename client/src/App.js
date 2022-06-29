@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import './static/App.css';
 import LandingModal from './components/LandingModal';
 import Navbar from './components/Navbar';
 import DinoTimeline from './components/DinoTimeline';
@@ -42,7 +42,7 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setCreators(data);
-      console.log("facts data", data);
+      console.log('facts data', data);
     });
   }, []);
 
@@ -92,7 +92,7 @@ function App() {
       <ScrollToTop/>
       <Routes>
         <Route
-          path="/"
+          path='/'
           element={
             <DinoTimeline
               allDinosaurs={allDinosaurs}
@@ -103,7 +103,7 @@ function App() {
           }
         />
         <Route
-          path="/favourites"
+          path='/favourites'
           element={
 
             <DinoTimeline
