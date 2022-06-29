@@ -13,8 +13,7 @@
     
     .ReactModal__Overlay--before-close{
         opacity: 0;
-        transition:  opacity 1500ms ease-in;
-        
+        transition:  opacity 1500ms ease-in;   
     }
     
    
@@ -43,8 +42,7 @@
 
 .landing-modal-div{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;  
     justify-content: center;
 }
 
@@ -154,7 +152,6 @@ h3.creator-title{
     padding: 10px;
     margin: 5px;
 }
-
 
 .creator-picture {
     border: 3px solid #0e5573;
@@ -352,5 +349,4 @@ h3.adlib-form-title{
     letter-spacing: -1px;
     margin-top: 30px;
     border: 3px solid #0e5573;
-
     }

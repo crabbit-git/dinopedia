@@ -105,13 +105,14 @@ function App() {
         <Route
           path="/favourites"
           element={
+
             <DinoTimeline
               allDinosaurs={favDinosaurs}
               handleAddFavDino={handleAddFavDino}
               handleRemoveFavDino={handleRemoveFavDino}
               favDinosaurs={favDinosaurs}
             />
-          }
+          } 
         />
       </Routes>
     </BrowserRouter>

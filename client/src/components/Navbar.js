@@ -4,7 +4,8 @@ import styles from "./LandingModal.css";
 import './Navbar.css'
 import Search from './Search';
 import Player from './Audio';
-import {Link} from 'react-router-dom';
+import {Link, Outlet, useMatch, useResolvedPath, NavLink} from 'react-router-dom';
+import type {LinkProps} from "react-router-dom";
 import Modal from "react-modal";
 import RandomFact from "./RandomFact";
 import CreatorsModal from "./CreatorsModal";
@@ -12,8 +13,27 @@ import DinoAdLibs from "./DinoAdLib";
 
 const Navbar = ({allDinosaurs, randomFacts, creators}) => {
 
+  function CustomLink({ children, to, ...props }: LinkProps) {
+    let resolved = useResolvedPath(to);
+    let match = useMatch({ path: resolved.pathname, end: true });
+  
+    return (
+      <div>
+        <Link
+          style={{ color: match ? "orange" : "white" }}
+          to={to}
+          {...props}
+        >
+          {children}
+        </Link>
+        {match && ""}
+      </div>
+    );
+  }
+
+ 
   return (  
-    <nav className="navbarr">
+    <nav className="navbar">
       {/* <div className="menu-icon"><span className="fas fa-bars"></span></div> */}
 
     <div className="logo-and-name">
@@ -30,7 +50,8 @@ const Navbar = ({allDinosaurs, randomFacts, creators}) => {
           <CreatorsModal creators={creators} />
           <DinoAdLibs />
           <div className="favourite-dino-link">
-          <Link to="/favourites">Favourite <img className="tiny-dino" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="tiny dino" /></Link>
+          <CustomLink to="/favourites"  >Favourite  <img className="tiny-dino" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="tiny dino" />
+          </CustomLink>
           </div>
         {/* </ul> */}
       </div>

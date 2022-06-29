@@ -4,7 +4,7 @@
 
 
   /* entire black navbar */
-  .navbarr{
+  .navbar{
     background-image: linear-gradient( #073346, #073346);
     position: sticky;
     display: flex;
@@ -24,9 +24,25 @@
     /* border: red 2px solid; */
   }
 
+ .nav-link{
+  font-family: 'Architects Daughter', cursive;
+    color: orange;
+    font-size: 20px;
+    word-spacing: -2px;
+    font-weight: 700;
+    text-decoration: none;
+ }
 
+ .unselected{
+  font-family: 'Architects Daughter', cursive;
+    color: #fff;
+    font-size: 20px;
+    word-spacing: -2px;
+    font-weight: 700;
+    text-decoration: none;
+ }
 
-.navbarr .logo-and-name{
+.navbar .logo-and-name{
   display: flex;
   margin-left: 5%;
   align-items: center;
@@ -124,10 +140,13 @@
     color: orange;
     cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
   }
+ 
 
   .favourite-dino-link {
     padding-left: 20px;
   }
+
+
 
 
   /* what are these reffering to????  */
