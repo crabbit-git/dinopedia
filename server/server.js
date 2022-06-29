@@ -15,7 +15,7 @@ const createRouter = collection => {
   router.get('/', (req, res) => {
     collection
       .find()
-      .sort({"era":-1})
+      // .sort({"era":-1})
       .toArray()
       .then((docs) => res.json(docs))
       .catch((err) => {
@@ -24,7 +24,19 @@ const createRouter = collection => {
         res.json({ status: 500, error: err });
       });
   });
-
+  
+    //INDEX2
+    // router.get('/db', (req, res) => {
+    //   collection
+    //     .find()
+    //     .toArray()
+    //     .then((docs) => res.json(docs))
+    //     .catch((err) => {
+    //       console.error(err);
+    //       res.status(500);
+    //       res.json({ status: 500, error: err });
+    //     });
+    // });
   //SHOW (modals?)
   // router.get('/:id', (req, res) => {
   //   const id = req.params.id;
@@ -47,6 +59,12 @@ MongoClient.connect('mongodb://localhost:27017')
     const dinosaursCollection = db.collection('dinosaurs'); 
     const dinosaursRouter = createRouter(dinosaursCollection); 
     app.use('/api/dinosaurs', dinosaursRouter);
+    const creatorsCollection = db.collection('creators'); 
+    const creatorsRouter = createRouter(creatorsCollection); 
+    app.use('/api/creators', creatorsRouter);
+    const randomFactsCollection = db.collection('randomFacts'); 
+    const randomFactsRouter = createRouter(randomFactsCollection); 
+    app.use('/api/randomFacts', randomFactsRouter);
   })
   .catch(console.err); 
 

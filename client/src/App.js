@@ -10,7 +10,10 @@ function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
   const [hasLoadedAllDinosaurs, setHasLoadedAllDinosaurs] = useState(false);
   const [favDinosaurs, setFavDinosaurs] = useState([]);
+  const [randomFacts, setRandomFacts] = useState([])
+  const [creators, setCreators] = useState([])
   const savedFavs = window.localStorage.getItem('favDinoNames');
+
 
   // Load in dinosaurs from database at startup and render page
   useEffect(() => {
@@ -24,6 +27,25 @@ function App() {
       `User has saved the following dinosaurs as favourites: ${savedFavs}`
     );
   }, []);
+
+  // fetch all random facts from Db
+  useEffect(() => {
+    fetch('http://localhost:5000/api/randomFacts/')
+    .then(res => res.json())
+    .then(data => {
+      setRandomFacts(data);
+    })}, [])
+    
+    useEffect(() => {
+    fetch('http://localhost:5000/api/creators/')
+    .then(res => res.json())
+    .then(data => {
+      setCreators(data);
+      console.log("facts data", data);
+    })}, [])
+
+  // console.log(creators);
+  // console.log(randomFacts);
 
   // When dinosaur list is populated, check for saved favourites in localStorage
   // and if they exist, pull them into the application's favourites list:
@@ -46,6 +68,7 @@ function App() {
     }
   }, [favDinosaurs]);
 
+
   const handleAddFavDino = dinoId => {
     const foundFavDino = allDinosaurs.find(dinosaur => {
       return dinosaur._id === dinoId // comparing the ID object to the ID string
@@ -60,10 +83,12 @@ function App() {
   setFavDinosaurs(filteredFavDinos);
   }
 
+
+
   return (
     <BrowserRouter>
       <LandingModal />
-      <Navbar allDinosaurs={allDinosaurs}/>
+      <Navbar allDinosaurs={allDinosaurs} creators={creators}  randomFacts={randomFacts} />
       <ScrollToTop/>
       <Routes>
         <Route

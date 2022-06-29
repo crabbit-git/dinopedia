@@ -10,7 +10,7 @@ import RandomFact from "./RandomFact";
 import CreatorsModal from "./CreatorsModal";
 import DinoAdLibs from "./DinoAdLib";
 
-const Navbar = ({allDinosaurs}) => {
+const Navbar = ({allDinosaurs, randomFacts, creators}) => {
 
   return (  
     <nav className="navbarr">
@@ -26,8 +26,8 @@ const Navbar = ({allDinosaurs}) => {
       <div className="nav-items">
         {/* These li elements should probably be inside a ul: */}
         {/* <ul> */}
-          <RandomFact  />
-          <CreatorsModal />
+          <RandomFact randomFacts={randomFacts} />
+          <CreatorsModal creators={creators} />
           <DinoAdLibs />
           <div className="favourite-dino-link">
           <Link to="/favourites">Favourite <img className="tiny-dino" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="tiny dino" /></Link>
