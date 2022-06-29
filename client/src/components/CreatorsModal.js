@@ -17,7 +17,7 @@ Modal.setAppElement("#root");
       const creatorInfo = creators.map((creator) => {
 
       return (
-        <div className="creator-div" >
+
         <div className="creator-profile" >
             <img className="creator-picture" src= {creator.picture} alt="creator name" />
             <ul className="creator-ul"> 
@@ -27,7 +27,7 @@ Modal.setAppElement("#root");
             </ul>
 
         </div> 
-        </div>
+ 
       )})
 
       return (
@@ -42,7 +42,9 @@ Modal.setAppElement("#root");
             className="landing-modal-content"
           >
             <h3>This is team Dinomite</h3>
+            <div className="creator-div" >
           {creatorInfo}
+             </div>
           <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
           &times;
           </button>
