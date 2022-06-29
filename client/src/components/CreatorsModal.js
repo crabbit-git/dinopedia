@@ -21,9 +21,9 @@ Modal.setAppElement("#root");
         <div className="creator-profile" >
             <img className="creator-picture" src= {creator.picture} alt="creator name" />
             <ul className="creator-ul"> 
-            <li><a href="javascript:void(1)" className="creator-links1">{creator.name}</a></li>
-            <li><a className="creator-links" href={creator.linkedIn}>LinkedIn</a></li>
-            <li><a className="creator-links" href={creator.GitHub}>GitHub</a></li>
+             <li><a href="javascript:void(1)" className="creator-name">{creator.name}</a></li>
+             <li><a className="creator-links" href={creator.linkedIn}>LinkedIn</a></li>
+             <li><a className="creator-links" href={creator.GitHub}>GitHub</a></li>
             </ul>
 
         </div> 
@@ -36,29 +36,27 @@ Modal.setAppElement("#root");
           <div className="content">
           </div>
           <li><a href="javascript:void(0)" onClick={toggleModal}>Creators</a></li>
-        <Modal isOpen={!isOpen}
+          <Modal isOpen={!isOpen}
             onRequestClose={toggleModal}
             contentLabel="modal"
             className="landing-modal-content"
           >
-          <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
-          &times;
-          </button>
-            <h3>This is team Dinomite</h3>
+            <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
+            &times;
+            </button>
+            <h3 className="creator-title">This is team Dinomite</h3>
             <div className="creator-div" >
                {creatorInfo}
+             <button type="button" onClick={toggleModal}  className="creator-modal-button">
+            Return to Dinopedia
+            </button>
             </div>
-          <br />
+            <div className="creator-button-div">
+
           
-          <button type="button" onClick={toggleModal}  className="landing-modal-button">
-        Return to Dinopedia
-          </button>
-          <p><br /></p>
-    
-          
-         
-          </Modal>
-          </div>
+            </div>
+            </Modal>
+        </div>
       );
 }
 
