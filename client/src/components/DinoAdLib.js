@@ -46,7 +46,13 @@ const DinoAdLibs = () => {
   }
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (dinoName === "" || noun === "" || verb  === "" || noun2 === "" || Adjective === "") {
+    if (
+      dinoName === "" ||
+      noun === "" ||
+      verb  === "" ||
+      noun2 === "" ||
+      Adjective === ""
+    ) {
       alert("Please complete all fields");
       toggleModal2();
       return false;
