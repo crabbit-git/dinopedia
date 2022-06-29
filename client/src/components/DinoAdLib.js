@@ -104,7 +104,7 @@ const DinoAdLibs = () => {
       <button type="button"  onClick={handleCloseAll} className="landing-modal-close-button" >
       &times;
       </button>
-      <h3>Dino AdLibs Final</h3>
+      <h3 className="adlib-return-title">Along time ago...</h3>
       <p className="adlib-return" >There once was a dinosaur called <span > {dinoName} </span> who lived in the triassic period and mainly ate
       <span className="adlib-css"> {noun} </span> .  
       <br /> <br /><span className="adlib-css"> {dinoName}  </span> was wiped out with the rest of the dinosaurs by a 
@@ -114,10 +114,9 @@ const DinoAdLibs = () => {
       <span className="adlib-css"> {Adjective}  </span> extinction that killed off more than 75 percent of Earth's species. <br />  br
       No wait that is not right??? If you really want ot know what happened to <span className="adlib-css"> {dinoName} </span>  then just click <span className="adlib-css"> {here}  </span> </p>
       <br/>
-      <button type="button" onClick={handleCloseAll}  className="landing-modal-button" >
+      <button type="button" onClick={handleCloseAll}  className="adlib-modal-button" >
         Return to Dinopedia
       </button>
-          <p><br /><br /></p>
      
       </Modal>
       </Modal>
