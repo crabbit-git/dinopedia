@@ -72,7 +72,8 @@ p {
     background-color: inherit;
     text-align: center;
     cursor: pointer;
-    white-space: nowrap
+    white-space: nowrap;
+    position: absolute;
 }
 .landing-modal-button {
     width: 80%;
@@ -88,7 +89,6 @@ p {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: -1px;
-    margin-left: 60px;
     border: 3px solid #0e5573;
 }
 
@@ -149,6 +149,55 @@ h3 {
 
 }
 
+.adlib-css {
+    color: greenyellow;
+    font-weight: lighter;
+}
+
+.adlib-atag:link {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+.adlib-atag:hover {
+    font-weight: bold;
+    color: greenyellow;
+}
+.adlib-atag:visited {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+.adlib-input {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.adlib-input {
+    display: flex;
+    flex-direction: row;
+}
+.adlib-input-box1 {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+
+.adlib-input-box {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 
 
 
