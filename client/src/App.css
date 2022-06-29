@@ -157,27 +157,27 @@ body {
 }
 
 .Triassic .container.left .date {
-  right: -70px;
+  right: -68px;
 }
 
 .Triassic .container.right .date {
-  left: -69px;
+  left: -67px;
 }
 
 .Jurassic .container.left .date  {
-  right: -74px;
+  right: -72px;
 }
 
 .Jurassic .container.right .date  {
-  left: -73px;
+  left: -71px;
 }
 
 .Cretaceous .container.left .date  {
-  right: -99px;
+  right: -97px;
 }
 
 .Cretaceous .container.right .date  {
-  left: -98px;
+  left: -96px;
 }
 
 /* bigger white circle on the card */
