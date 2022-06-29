@@ -32,29 +32,24 @@ Modal.setAppElement("#root");
 
       return (
         <div>
-          <i className="icon fa fa-home"/>
-          <div className="content">
-          </div>
           <li><a href="javascript:void(0)" onClick={toggleModal}>Creators</a></li>
           <Modal isOpen={!isOpen}
             onRequestClose={toggleModal}
             contentLabel="modal"
             className="landing-modal-content"
           >
+            {/* <div className="creators-container"> */}
             <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
             &times;
             </button>
             <h3 className="creator-title">This is team Dinomite</h3>
-            <div className="creator-div" >
-               {creatorInfo}
-             <button type="button" onClick={toggleModal}  className="creator-modal-button">
-            Return to Dinopedia
-            </button>
-            </div>
-            <div className="creator-button-div">
-
-          
-            </div>
+              <div className="creator-div">
+                {creatorInfo}
+              <button type="button" onClick={toggleModal}  className="creator-modal-button">
+              Return to Dinopedia
+              </button>
+              </div>
+            {/* </div> */}
             </Modal>
         </div>
       );

@@ -120,6 +120,10 @@ h3.creator-title{
     margin: 0px;
 }
 
+.creators-container {
+    margin-bottom: 30px;
+}
+
 .creator-div {
     margin: 10px;
     height: 70%;
@@ -183,12 +187,6 @@ h3.creator-title{
     font-family: 'Montserrat', sans-serif;
 }
 
-.creator-button-div{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-}
-
 .creator-modal-button {
     width: 80%;
     height: 70px;
@@ -228,7 +226,7 @@ h3.adlib-return-title{
 }
 
 .adlib-return{
-    margin: 10px;
+    margin: 30px;
 }
 
 .adlib-form-div{
@@ -327,7 +325,7 @@ h3.adlib-form-title{
     font-weight: 600;
     letter-spacing: -1px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     /* margin-left: 60px; */
     border: 3px solid #0e5573;
 }
