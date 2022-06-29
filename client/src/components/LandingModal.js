@@ -46,14 +46,18 @@ const LandingModal = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
-      <h3>Welcome to our WD_23 group project </h3>
+        <br />
+      <h3 className= "landing-h3" >Dinopedia</h3>
+      <p>Learn about your favourite dinosaurs, Select your favourite ones and learn about why they no longer roam the Earth.
+       </p>
+   
       <img className="landing-modal-image" src="https://codeclan.com/wp-content/uploads/2019/04/CodeClan-Logo-White-2019-01.png"/>
       <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
       &times;
       </button>
       <br />
       <button type="button" onClick={toggleModal}  className="landing-modal-button" >
-    Dinopedia
+    ENTER
       </button>
 
       

@@ -43,15 +43,18 @@
 
 .landing-modal-image {
     /* position: absolute; */
-    width: 80%;
+    width: 40%;
     display: flex;
     justify-content:  center;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
-    margin-left: 60px;
+    margin-left: 200px;
     
 }
         
+.landing-h3 {
+    font-size: 60px;
+}
 p {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -89,6 +92,8 @@ p {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: -1px;
+    margin-top: 30px;
+    margin-left: 60px;
     border: 3px solid #0e5573;
 }
 
@@ -128,13 +133,38 @@ h3 {
 }
 
 .creator-picture {
-    height: 40%;
+    height: 60%;
     width: 40%;
 
 }
 
+.creator-ul {
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .creator-links {
+    margin-top: -20px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.creator-links:hover {
+    color: red;
+    margin-top: -20px;
+    margin-right: 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.creator-links1 {
+    margin-top: -20px;
+    margin-right: 40px;
     font-size: large;
+    text-decoration: none;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
@@ -180,24 +210,46 @@ h3 {
 }
 
 .adlib-input {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
+
 }
 .adlib-input-box1 {
+    font-family: 'Montserrat', sans-serif;
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     margin-bottom: 40px;
+    font-size: xx-large;
 }
 
 
 .adlib-input-box {
+    font-family: 'Montserrat', sans-serif;
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    font-size: xx-large;
 }
 
+.landing-modal-button1 {
+    width: 80%;
+    height: 70px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    background-color: #171c24;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
+    background-repeat: no-repeat;
+    background-size: auto 70px;
+    padding-left: 40px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    border: 3px solid #0e5573;
 
-
+    }

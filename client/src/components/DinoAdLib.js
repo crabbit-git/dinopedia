@@ -58,9 +58,12 @@ const DinoAdLibs = () => {
     event.preventDefault()
     if (noun === "" ||  verb  === "" ||   noun  === "" ||  noun2    === "" || Adjective === "") {
         alert("Please complete all fields");
-        handleCloseAll()
-        return false;
-    }}
+        toggleModal2()
+        return false
+
+        
+    } else return true
+  }
 
     const here =  <a className="adlib-atag" href="https://www.nationalgeographic.com/science/article/dinosaur-killing-asteroid-most-likely-struck-in-spring#:~:text=The%20impact%20that%20ended%20the,75%20percent%20of%20Earth's%20species.">here.</a>
 
@@ -76,26 +79,25 @@ const DinoAdLibs = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
-        <h3>Dinopedia Ad-libs</h3>
         <h3>Discover why dinosaurs are extinct and practice your grammar</h3>
         <form onSubmit={handleFormSubmit} className="adlib-form">
 
-      <label  className="adlib-input" htmlFor="dinoName">A noun or naming word:</label>
+      <label  className="adlib-input" htmlFor="dinoName">Enter a 'Noun' or naming word:</label>
       <input type="text" id="dinoName" name="dinoName" className="adlib-input-box" value={dinoName} onChange={handleDinoNameChange} />
 
-      <label className="adlib-input" htmlFor="verb">A Verb or doing word:</label>
+      <label className="adlib-input" htmlFor="verb">Enter a 'Verb' or doing word:</label>
       <input type="text" id="verb" name="verb" className="adlib-input-box" value={verb} onChange={handleVerbChange} />
 
-      <label className="adlib-input" htmlFor="noun">A noun or naming word:</label>
+      <label className="adlib-input" htmlFor="noun">Enter a 'Noun' or naming word:</label>
       <input type="text" id="noun" name="noun"className="adlib-input-box" value={noun} onChange={handleNounChange} />
 
-      <label className="adlib-input" htmlFor="noun2">Another noun or naming word:</label>
+      <label className="adlib-input" htmlFor="noun2">Enter another 'noun' or naming word:</label>
       <input type="text" id="noun2" name="noun2" className="adlib-input-box"value={noun2} onChange={handleNoun2Change} />
 
-      <label className="adlib-input" htmlFor="Adjective">An Adjective or describing word:</label>
+      <label className="adlib-input" htmlFor="Adjective">Enter an 'Adjective' or describing word:</label>
       <input type="text" id="Adjective" name="Adjective" className="adlib-input-box1"value={Adjective} onChange={handleAdjectiveChange} />
 
-        <button type="submit" onClick={handleSubmit} className="landing-modal-button" >
+        <button type="submit" onClick={handleSubmit} className="landing-modal-button1" >
         Submit Answers
         </button>
         </form>
@@ -104,6 +106,14 @@ const DinoAdLibs = () => {
       <button type="button" onClick={toggleModal1} className="landing-modal-close-button" >
       &times;
       </button>
+
+      <br />
+      <button type="button" onClick={toggleModal1}  className="landing-modal-button" >
+        Return to Dinopedia
+          </button>
+          
+          <p><br /><br /></p>
+
       <Modal isOpen={!isOpen2}
         onRequestClose={toggleModal2}
         contentLabel="modal"
@@ -124,8 +134,9 @@ const DinoAdLibs = () => {
       </button>
       <br />
       <button type="button" onClick={handleCloseAll}  className="landing-modal-button" >
-        back to Dinopedia
+        Return to Dinopedia
           </button>
+          <p><br /><br /></p>
      
       </Modal>
 

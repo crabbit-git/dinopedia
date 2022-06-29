@@ -8,9 +8,6 @@ Modal.setAppElement("#root");
 
 const RandomFact = () => {
   
-    const [isOpen, setIsOpen] = useState(true);
-    const [rndmFact, setrndmFact] = useState("");
-  
     function toggleModal() {
         setIsOpen(!isOpen);
       }
@@ -36,9 +33,11 @@ const RandomFact = () => {
     const randomFact = listOfRandomFacts[Math.floor(Math.random()*listOfRandomFacts.length)];
     const randomFact2 = listOfRandomFacts[Math.floor(Math.random()*listOfRandomFacts.length)];
   
+    const [isOpen, setIsOpen] = useState(true);
+    const [rndmFact, setrndmFact] = useState(randomFact2);
   
     const toggleRdmnFact = () => {
-      setrndmFact(randomFact2)
+      setrndmFact(randomFact)
     //   if (rndmFact === "") {
     //     setrndmFact(randomFact2)
     //     return rndmFact

@@ -13,22 +13,23 @@ Modal.setAppElement("#root");
     function toggleModal() {
         setIsOpen(!isOpen);
       }
-      
-    const creator1 = {name: "Colette", picture: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png", linkedIn: "/", GitHub: "/"}
-    const creator2 = {name: "Sean", picture: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png", linkedIn: "/", GitHub: "/"}
-    const creator3 = {name: "Xander", picture: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png", linkedIn: "/", GitHub: "/"}
-    const creator4 = {name: "Heather", picture: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png", linkedIn: "/", GitHub: "/"}
+
+    const creator1 = {name: "Colette Dufficy", picture: "https://avatars.githubusercontent.com/u/90625181?v=4", linkedIn: "https://www.linkedin.com/in/colettedufficy/", GitHub: "https://github.com/ColetteDufficy"}
+    const creator2 = {name: "Sean Johnson", picture: "https://avatars.githubusercontent.com/u/98856218?v=4", linkedIn: "https://www.linkedin.com/in/communicasean/", GitHub: "https://github.com/sjohns2020"}
+    const creator3 = {name: "Xander Mackenzie", picture: "https://avatars.githubusercontent.com/u/98990717?v=4", linkedIn: "https://www.linkedin.com/in/xandermackenzie/", GitHub: "https://github.com/crabbit-git"}
+    const creator4 = {name: "Heather Lamont", picture: "https://avatars.githubusercontent.com/u/98851496?v=4", linkedIn: "https://www.linkedin.com/in/heather-lamont-05aa3b46/", GitHub: "https://github.com/HeatherLamont"}
     const creatorList = [creator1, creator2, creator3, creator4]
 
     const creatorProfile = creatorList.map((creator) => {
         return ( 
             <div className="creator-profile" >
                 <img className="creator-picture" src= {creator.picture} alt="creator name" />
-                <p className="creator-name">{creator.name}</p>
-                <ul>
-                    <li><a className="creator-links" href={creator.linkedIn}>LinkedIn</a></li>
-                    <li><a className="creator-links" href={creator.GitHub}>GitHub</a></li>
+                <ul className="creator-ul"> 
+                <li><a href="javascript:void(1)" className="creator-links1">{creator.name}</a></li>
+                <li><a className="creator-links" href={creator.linkedIn}>LinkedIn</a></li>
+                <li><a className="creator-links" href={creator.GitHub}>GitHub</a></li>
                 </ul>
+  
             </div> 
          );
     })
@@ -52,9 +53,11 @@ Modal.setAppElement("#root");
           &times;
           </button>
           <br />
-          <button type="button" onClick={toggleModal}  className="landing-modal-button" >
-        back to Dinopedia
+          
+          <button type="button" onClick={toggleModal}  className="landing-modal-button">
+        Return to Dinopedia
           </button>
+          <p><br /></p>
     
           
          
