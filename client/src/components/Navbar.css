@@ -1,83 +1,49 @@
 /* fonts imported */
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@100;300;400;600&family=Permanent+Marker&family=Righteous&family=Rubik+Moonrocks&display=swap');
 
-
-
-  /* entire black navbar */
-  .navbar{
-    background-image: linear-gradient( #073346, #073346);
-    position: sticky;
-    display: flex;
-    /* overflow: hidden; */
-    /* flex-wrap: wrap; */
-    align-items: center;
-    justify-content: space-between;
-    min-height: max-content;
-    /* height: auto; */
-    /* padding-right: 80px; */
-    padding: 8px 80px 8px 0px;
-    top: 0;
-    /* transform: translateY(-31%); */
-    width: 100%;
-    height: 10%;
-    z-index: 2;
-    /* border: red 2px solid; */
-  }
-
- .nav-link{
-  font-family: 'Architects Daughter', cursive;
-    color: orange;
-    font-size: 20px;
-    word-spacing: -2px;
-    font-weight: 700;
-    text-decoration: none;
- }
-
- .unselected{
-  font-family: 'Architects Daughter', cursive;
-    color: #fff;
-    font-size: 20px;
-    word-spacing: -2px;
-    font-weight: 700;
-    text-decoration: none;
- }
+.navbar{
+  background-image: linear-gradient( #073346, #073346);
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: max-content;
+  padding: 8px 80px 8px 0px;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  z-index: 2;
+}
 
 .navbar .logo-and-name{
   display: flex;
   margin-left: 5%;
   align-items: center;
-  /* border: rgb(219, 26, 249) 3px solid; */
 }
 
 /* dino logo little drawing */
 #logo-pic{
-  /* background-color: red; */
   width: 70px;
-  /* object-fit: cover; */
   }
 
 
 /* dinopedia text logo */
 .logo-name a{
-    list-style: none;
-    font-family: 'Bangers', cursive;
-    color: #fff;
-    font-size: 60px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    text-shadow: 2px 2px 3px rgb(0, 0, 0);
-    text-decoration: none;
-    padding-left: 10px;
-    /* border: violet 3px solid; */
+  list-style: none;
+  font-family: 'Bangers', cursive;
+  color: #fff;
+  font-size: 60px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+  text-decoration: none;
+  padding-left: 10px;
 }
 
 .logo-name a:hover{
-   color: orange;
-   cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
+  color: orange;
+  cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
 }
-
-
-
 
 #logo-pic:hover{
   animation: shake 0.5s;
@@ -99,141 +65,36 @@
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-
-  
-
-
 .tiny-dino {
   max-height: 20px;
   padding-left: 0px;
-  /* border: blue 2px solid; */
 }
 
 .nav-items{
-    display: flex;
-    /* flex: 1; */
-    /* padding: 0 0 0 40px; */
-    /* border: purple 2px solid; */
-    /* font-size: 50px; */
-    }
-
+  display: flex;
+  }
 
 .nav-items li{
-    /* margin-left: 50px; */
-    /* margin-right: 20px; */
-    list-style: none;
-    padding: 0 25px;
-  }
+  list-style: none;
+  padding: 0 25px;
+}
 
 /* text links on page */
-  .nav-items a{
-    font-family: 'Architects Daughter', cursive;
-    color: #fff;
-    font-size: 20px;
-    word-spacing: -2px;
-    font-weight: 700;
-    text-decoration: none;
-  }
+.nav-items a{
+  font-family: 'Architects Daughter', cursive;
+  color: #fff;
+  font-size: 20px;
+  word-spacing: -2px;
+  font-weight: 700;
+  text-decoration: none;
+}
   
-  /* text links on page on hover*/
-  .nav-items a:hover{
-    color: orange;
-    cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
-  }
- 
+/* text links on page on hover*/
+.nav-items a:hover{
+  color: orange;
+  cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
+}
 
-  .favourite-dino-link {
-    padding-left: 20px;
-  }
-
-
-
-
-  /* what are these reffering to????  */
-  /* nav .menu-icon span,
-  nav .cancel-icon,
-  nav .search-icon{
-    display: none;
-  } */
-  
-/* 
-  nav .logo.space{
-    color: greenyellow;
-    padding: 0 5px 0 5px;
-  }
- */
-
-
-
-/*   
-  @media (max-width: 1245px) {
-    nav{
-      padding: 0 50px;
-    }
-  } */
-  /* @media (max-width: 1140px){
-    nav{
-      padding: 0px;
-    }
-    nav .logo{
-      flex: 2;
-      text-align: center;
-    }
-    nav .nav-items{
-      position: fixed;
-      z-index: 99;
-      top: 70px;
-      width: 100%;
-      left: -100%;
-      height: 100%;
-      padding: 10px 50px 0 50px;
-      text-align: center;
-      background: #14181f;
-      display: inline-block;
-      transition: left 0.3s ease;
-    }
-    nav .nav-items.active{
-      left: 0px;
-    }
-    nav .nav-items li{
-      line-height: 40px;
-      margin: 30px 0;
-    }
-    nav .nav-items li a{
-      font-size: 20px;
-    }
-
-    nav .menu-icon{
-      display: block;
-    }
-    nav .search-icon,
-    nav .menu-icon span{
-      display: block;
-    }
-    nav .menu-icon span.hide,
-    nav .search-icon.hide{
-      display: none;
-    }
-    nav .cancel-icon.show{
-      display: block;
-    }
-  } */
-
-  /* @media (max-width: 980px){
-    nav .menu-icon,
-    nav .cancel-icon,
-    nav .search-icon{
-      margin: 0 20px;
-    }
-    nav form{
-      right: 30px;
-    }
-  }
-  @media (max-width: 350px){
-    nav .menu-icon,
-    nav .cancel-icon,
-    nav .search-icon{
-      margin: 0 10px;
-      font-size: 16px;
-    }
-  } */
+.favourite-dino-link {
+  padding-left: 20px;
+}

@@ -34,31 +34,29 @@ const Navbar = ({allDinosaurs, randomFacts, creators}) => {
  
   return (  
     <nav className="navbar">
-      {/* <div className="menu-icon"><span className="fas fa-bars"></span></div> */}
-
     <div className="logo-and-name">
       <div className="logo">
         <Player />
       </div>
       <div className="logo-name"><Link to="/">Dinopedia</Link></div>
     </div>
-
       <div className="nav-items">
-        {/* These li elements should probably be inside a ul: */}
-        {/* <ul> */}
           <RandomFact randomFacts={randomFacts} />
-          <CreatorsModal creators={creators} />
           <DinoAdLibs />
           <div className="favourite-dino-link">
-          <CustomLink to="/favourites"  >Favourite  <img className="tiny-dino" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png" alt="tiny dino" />
-          </CustomLink>
+            <CustomLink to="/favourites">
+              Favourites
+              <img
+              className="tiny-dino"
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png"
+              alt="tiny dino"
+              />
+            </CustomLink>
           </div>
-        {/* </ul> */}
+          <CreatorsModal creators={creators} />
       </div>
-
       <Search allDinosaurs={allDinosaurs} />
     </nav>
-    
   );
 }
 
