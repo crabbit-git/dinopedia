@@ -46,14 +46,14 @@ const LandingModal = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
-      <h3>Welcome to our WD_23 group project </h3>
-      <img className="landing-modal-image" src="https://codeclan.com/wp-content/uploads/2019/04/CodeClan-Logo-White-2019-01.png"/>
       <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
       &times;
       </button>
+      <h3>Welcome to our WD_23 group project </h3>
+      <img className="landing-modal-image" src="https://codeclan.com/wp-content/uploads/2019/04/CodeClan-Logo-White-2019-01.png"/>
       <br />
       <button type="button" onClick={toggleModal}  className="landing-modal-button" >
-    Dinopedia
+    Continue to Dinopedia...
       </button>
 
       

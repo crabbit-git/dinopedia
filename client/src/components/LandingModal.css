@@ -35,9 +35,9 @@
         border: 3px solid #0e5573;
         overflow: auto;
         /* -webkit-overflow-scrolling: touch; */
-        border-radius: 4px;
+        border-radius: 0px 50px 30px 50px;
         outline: none;
-        padding: 0px 100px;
+        box-shadow: 2px 2px 7px #000000;
           }
 
 
@@ -62,17 +62,18 @@ p {
     letter-spacing: -1px;
 }
 .landing-modal-close-button {
-    border: none;
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    color: white;
-    border: solid;
-    background-color: inherit;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap
+    position: sticky;
+    width:30px;
+    height:30px;
+    left: 94%;
+    top: 15px;
+    background-color: orange;
+    font-size: large;
+    font-family: 'Permanent Marker', cursive;
+    color: #0e5573;
+    border-radius: 0px 10px 5px 10px;
+    border: #0e5573 2px solid;
+    z-index: 1;
 }
 .landing-modal-button {
     width: 80%;
@@ -82,7 +83,8 @@ p {
     background-color: #171c24;
     background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
     background-repeat: no-repeat;
-    background-size: auto 70px;
+    background-size: 55px;
+    background-position: 10px;
     padding-left: 40px;
     color: #fff;
     font-size: 30px;

@@ -59,11 +59,13 @@ const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? "star
         onClick={toggleModal} type="button"> X 
       </button>
         <div className="dino-modal-inner">
+            <div className="dino-modal-title-div">
 
             <h3 className="dino-modal-name">{dino.name}</h3>
-                <button onClick={handleFavButtonClick} className="fav-button">
+                <button onClick={handleFavButtonClick} className="modal-fav-button">
               {toggleStar}
                  </button>
+            </div>
 
           <div className="dino-modal-image-div">
             <img className="dino-modal-image"
