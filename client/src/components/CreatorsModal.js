@@ -48,15 +48,10 @@ Modal.setAppElement("#root");
             <div className="creator-div" >
                {creatorInfo}
             </div>
-          <br />
-          
           <button type="button" onClick={toggleModal}  className="landing-modal-button">
         Return to Dinopedia
           </button>
-          <p><br /></p>
-    
           
-         
           </Modal>
           </div>
       );

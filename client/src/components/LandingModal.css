@@ -109,13 +109,16 @@ h3 {
 }
 
 .creator-div {
+    margin: 10px;
     height: 70%;
     /* width: 70%; */
     display: flex;
     flex-wrap: wrap;
+    border-radius: 0px 10px 5px 10px;
 }
 
 .creator-profile {
+    border-radius: 0px 10px 5px 10px;
     border: 3px solid #0e5573;
     height: 50%;
     width: 50%;
