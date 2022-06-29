@@ -75,13 +75,14 @@ const DinoAdLibs = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
+      <div className="adlib-form-div">
         <button
           type="button" onClick={toggleModal1}
           className="landing-modal-close-button"
         >
         &times;
         </button>
-        <h3>Discover why dinosaurs are extinct and practice your grammar</h3>
+        <h3 className="adlib-form-title">Discover why dinosaurs are extinct and practice your grammar</h3>
         <form onSubmit={handleFormSubmit} className="adlib-form">
           <label className="adlib-input" htmlFor="dinoName">
             Enter a noun (a "naming" word):
@@ -124,18 +125,18 @@ const DinoAdLibs = () => {
           />
           <button
             type="submit" onClick={handleSubmit}
-            className="landing-modal-button1"
+            className="adlib-modal-button"
           >
             Submit Answers
           </button>
         </form>
-        <br/>
-        <br/>
+        
         <button type="button" onClick={toggleModal1}
-        className="landing-modal-button">
+        className="adlib-modal-button">
           Return to Dinopedia
         </button>
-        <br /><br />
+      </div>
+        
         <Modal isOpen={!isOpen2}
           onRequestClose={toggleModal2}
           contentLabel="modal"
@@ -147,8 +148,9 @@ const DinoAdLibs = () => {
           >
           &times;
           </button>
-          <h3>A long time ago...</h3>
-          <p className="adlib-return">
+          <div className="adlib-return-div">
+            <h3 className="adlib-return-title">A long time ago...</h3>
+           <p className="adlib-return">
             There once was a dinosaur called
             <span className="adlib-css"> {dinoName} </span>
             who lived in the cretaceous era and loved to eat
@@ -179,16 +181,18 @@ const DinoAdLibs = () => {
             If you want to know what really happened to
             <span className="adlib-css"> {dinoName}</span>, click
             <span className="adlib-css"> {here}</span>!
-          </p>
-          <br/>
-          <button
+           </p>
+            <br/>
+            <button
             type="button"
             onClick={handleCloseAll}
-            className="landing-modal-button"
-          >
+            className="adlib-modal-button"
+            >
             Return to Dinopedia
-          </button>
-          <br /><br />
+            </button>
+
+          </div>
+        
         </Modal>
       </Modal>
     </div>

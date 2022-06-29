@@ -176,8 +176,7 @@ h3.creator-title{
 }
 
 .creator-name {
-    margin-top: -20px;
-   
+    margin-top: -20px;  
     font-size: large;
     text-decoration: none;
     color: #fff;
@@ -221,10 +220,34 @@ h3.adlib-return-title{
     margin: 0px;
 }
 
+.adlib-return-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .adlib-return{
     margin: 10px;
 }
 
+.adlib-form-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h3.adlib-form-title{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 10px;
+}
 .adlib-form {
     display: flex;
     flex-direction: column;
@@ -280,7 +303,6 @@ h3.adlib-return-title{
     font-size: xx-large;
 }
 
-
 .adlib-input-box {
     font-family: 'Montserrat', sans-serif;
     width: 50%;
@@ -305,6 +327,7 @@ h3.adlib-return-title{
     font-weight: 600;
     letter-spacing: -1px;
     margin-top: 10px;
+    margin-bottom: 10px;
     /* margin-left: 60px; */
     border: 3px solid #0e5573;
 }
