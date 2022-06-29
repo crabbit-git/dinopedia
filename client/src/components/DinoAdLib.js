@@ -69,7 +69,10 @@ const DinoAdLibs = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
-        <button type="button" onClick={toggleModal1} className="landing-modal-close-button" >
+        <button
+          type="button" onClick={toggleModal1}
+          className="landing-modal-close-button"
+        >
         &times;
         </button>
         <h3>Discover why dinosaurs are extinct and practice your grammar</h3>
