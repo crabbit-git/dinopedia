@@ -38,7 +38,7 @@ Modal.setAppElement("#root");
             contentLabel="modal"
             className="landing-modal-content"
           >
-            {/* <div className="creators-container"> */}
+            <div className="creators-container">
             <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
             &times;
             </button>
@@ -49,7 +49,7 @@ Modal.setAppElement("#root");
               Return to Dinopedia
               </button>
               </div>
-            {/* </div> */}
+            </div>
             </Modal>
         </div>
       );

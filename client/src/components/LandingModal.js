@@ -25,6 +25,8 @@ const LandingModal = () => {
         contentLabel="modal"
         className="landing-modal-content"
       >
+        <div className="landing-modal-div">
+
       <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
       &times;
       </button>
@@ -34,6 +36,7 @@ const LandingModal = () => {
       <button type="button" onClick={toggleModal}  className="landing-modal-button" >
     ENTER
       </button>
+        </div>
       </Modal>
       </div>
   );

@@ -41,14 +41,19 @@
         box-shadow: 2px 2px 7px #000000;
           }
 
-.landing-modal-image {
-    /* position: absolute; */
-    width: 40%;
+.landing-modal-div{
     display: flex;
-    justify-content:  center;
+    flex-direction: column;
+    
+    justify-content: center;
+}
+
+.landing-modal-image {
+    position: relative;
+    width: 40%;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
-    margin-left: 200px;
+    margin-left: 30%;
     
 }
         
@@ -121,7 +126,7 @@ h3.creator-title{
 }
 
 .creators-container {
-    margin-bottom: 30px;
+    margin: none;
 }
 
 .creator-div {
@@ -203,6 +208,7 @@ h3.creator-title{
     font-weight: 600;
     letter-spacing: -1px;
     margin-top: 10px;
+    margin-bottom: 30px;
     /* margin-left: 60px; */
     border: 3px solid #0e5573;
 }
