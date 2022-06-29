@@ -5,7 +5,7 @@ import styles from "./LandingModal.css";
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
-    const CreatorsModal = () => {
+    const CreatorsModal = ({creators}) => {
 
      const [isOpen, setIsOpen] = useState(true);
 
@@ -14,25 +14,21 @@ Modal.setAppElement("#root");
         setIsOpen(!isOpen);
       }
 
-    const creator1 = {name: "Colette Dufficy", picture: "https://avatars.githubusercontent.com/u/90625181?v=4", linkedIn: "https://www.linkedin.com/in/colettedufficy/", GitHub: "https://github.com/ColetteDufficy"}
-    const creator2 = {name: "Sean Johnson", picture: "https://avatars.githubusercontent.com/u/98856218?v=4", linkedIn: "https://www.linkedin.com/in/communicasean/", GitHub: "https://github.com/sjohns2020"}
-    const creator3 = {name: "Xander Mackenzie", picture: "https://avatars.githubusercontent.com/u/98990717?v=4", linkedIn: "https://www.linkedin.com/in/xandermackenzie/", GitHub: "https://github.com/crabbit-git"}
-    const creator4 = {name: "Heather Lamont", picture: "https://avatars.githubusercontent.com/u/98851496?v=4", linkedIn: "https://www.linkedin.com/in/heather-lamont-05aa3b46/", GitHub: "https://github.com/HeatherLamont"}
-    const creatorList = [creator1, creator2, creator3, creator4]
+      const creatorInfo = creators.map((creator) => {
 
-    const creatorProfile = creatorList.map((creator) => {
-        return ( 
-            <div className="creator-profile" >
-                <img className="creator-picture" src= {creator.picture} alt="creator name" />
-                <ul className="creator-ul"> 
-                <li><a href="javascript:void(1)" className="creator-links1">{creator.name}</a></li>
-                <li><a className="creator-links" href={creator.linkedIn}>LinkedIn</a></li>
-                <li><a className="creator-links" href={creator.GitHub}>GitHub</a></li>
-                </ul>
-  
-            </div> 
-         );
-    })
+      return (
+        <div className="creator-div" >
+        <div className="creator-profile" >
+            <img className="creator-picture" src= {creator.picture} alt="creator name" />
+            <ul className="creator-ul"> 
+            <li><a href="javascript:void(1)" className="creator-links1">{creator.name}</a></li>
+            <li><a className="creator-links" href={creator.linkedIn}>LinkedIn</a></li>
+            <li><a className="creator-links" href={creator.GitHub}>GitHub</a></li>
+            </ul>
+
+        </div> 
+        </div>
+      )})
 
       return (
         <div>
@@ -46,9 +42,7 @@ Modal.setAppElement("#root");
             className="landing-modal-content"
           >
             <h3>This is team Dinomite</h3>
-            <div className="creator-div" >
-               {creatorProfile}
-            </div>
+          {creatorInfo}
           <button type="button" onClick={toggleModal} className="landing-modal-close-button" >
           &times;
           </button>
