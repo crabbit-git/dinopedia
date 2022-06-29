@@ -108,45 +108,53 @@ h3 {
     letter-spacing: -1px;
 }
 
+h3.creator-title{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin: 0px;
+}
+
 .creator-div {
     margin: 10px;
     height: 70%;
     /* width: 70%; */
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     border-radius: 0px 10px 5px 10px;
 }
 
 .creator-profile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     border-radius: 0px 10px 5px 10px;
     border: 3px solid #0e5573;
-    height: 50%;
-    width: 50%;
-    background-color:  #171c24;;
-    display: flex;
-    flex-direction: column;
+    height: 120px;
+    width: 450px;
+    min-width: 450px;
+    background-color:  #171c24;
     align-items: center;
     padding: 10px;
-
-    /* justify-content: center; */
-    
+    margin: 5px;
 }
 
-.creator-name {
-    font-size: large;
-}
 
 .creator-picture {
-    height: 60%;
-    width: 40%;
-
+    border: 3px solid #0e5573;
+    border-radius: 0px 10px 5px 10px;
+    height: 80%;
+    width: 20%;
 }
 
 .creator-ul {
     list-style: none; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .creator-links {
     margin-top: -20px;
@@ -154,6 +162,8 @@ h3 {
     text-decoration: none;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    text-decoration-line: underline;
+    
 }
 
 .creator-links:hover {
@@ -164,13 +174,39 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.creator-links1 {
+.creator-name {
     margin-top: -20px;
-    margin-right: 40px;
+   
     font-size: large;
     text-decoration: none;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+}
+
+.creator-button-div{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.creator-modal-button {
+    width: 80%;
+    height: 70px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    background-color: #171c24;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
+    background-repeat: no-repeat;
+    background-size: 55px;
+    background-position: 10px;
+    padding-left: 40px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-top: 10px;
+    /* margin-left: 60px; */
+    border: 3px solid #0e5573;
 }
 
 .adlib-form {
