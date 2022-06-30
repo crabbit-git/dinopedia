@@ -6,7 +6,7 @@ Modal.setAppElement('#root');
 
 const RandomFact = ({randomFacts}) => {
   
-  function toggleModal() {
+  const toggleModal = () => {
     setIsOpen(!isOpen);
   }
 
@@ -18,23 +18,6 @@ const RandomFact = ({randomFacts}) => {
   const [isOpen, setIsOpen] = useState(true);
   const [fact, setFact] = useState(randomFact);
 
-  // const changeFact = () => {
-  //   setFact(randomFact);
-  //   if (fact ==! randomFact) {
-  //     setFact(randomFact);
-  //     return fact
-  //   } else if (fact ==! randomFact2) {
-  //     setFact(randomFact);
-  //     return fact
-  //   } else if (fact === randomFact) {
-  //     setFact(randomFact2);
-  //     return fact
-  //   } else if (fact === randomFact2) {
-  //     setFact(randomFact);
-  //     return fact
-  //   }
-  // }
-
   const changeFact = () => {
     setFact(randomFact);
     if (randomFact !== fact) {
@@ -45,11 +28,16 @@ const RandomFact = ({randomFacts}) => {
     return fact
   }
 
+  const firstFact = () => {
+    toggleModal();
+    changeFact();
+  }
+
   return (
     <div>
       <li>
-        <a href='javascript:void(0)' onClick={toggleModal}>
-          Did you know?
+        <a href='javascript:void(0)' onClick={firstFact}>
+          Did you know...?
         </a>
       </li>
       <Modal isOpen={!isOpen}
