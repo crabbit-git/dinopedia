@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Styles } from 'react-modal';
+import { NavLink } from 'react-router-dom';
 import '../static/LandingModal.css';
 
 import Modal from 'react-modal';
@@ -9,43 +9,39 @@ const CreatorsModal = ({creators}) => {
 
   const [isOpen, setIsOpen] = useState(true);
 
-  function toggleModal() {
-      setIsOpen(!isOpen);
-  }
+  const toggleModal = () => setIsOpen(!isOpen);
 
-  const creatorInfo = creators.map(creator => {
-    return (
-      <div className='creator-profile' >
-        <img
-          className='creator-picture' src={creator.picture} alt='creator name'
-        />
-        <ul className='creator-ul'> 
-          <li>
-            <a href='javascript:void(1)' className='creator-name'>
-              {creator.name}
-            </a>
-          </li>
-          <li>
-            <a className='creator-links' href={creator.linkedIn}>
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a className='creator-links' href={creator.GitHub}>
-              GitHub
-            </a>
-          </li>
-        </ul>
-      </div> 
-    );
-  });
+  const creatorInfo = creators.map(creator => (
+    <div className='creator-profile' key={creator._id}>
+      <img
+        className='creator-picture' src={creator.picture} alt='creator name'
+      />
+      <ul className='creator-ul'> 
+        <li>
+          <h3 className='creator-name'>
+            {creator.name}
+          </h3>
+        </li>
+        <li>
+          <a className='creator-links' href={creator.linkedIn}>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a className='creator-links' href={creator.GitHub}>
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div> 
+  ));
 
   return (
     <div>
       <li>
-        <a href='javascript:void(0)' onClick={toggleModal}>
+        <NavLink to='#' onClick={toggleModal}>
           Creators
-        </a>
+        </NavLink>
       </li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { NavLink } from 'react-router-dom';
 
 Modal.setAppElement('#root');
 
@@ -66,7 +67,9 @@ const DinoAdLibs = () => {
   return (
     <div>
       <li>
-        <a href='javascript:void(0)' onClick={toggleModal1}>Story Time</a>
+        <NavLink to='#' onClick={toggleModal1}>
+          Story Time
+        </NavLink>
       </li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal1}
