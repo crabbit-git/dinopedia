@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../static/LandingModal.css';
 import Modal from 'react-modal';
 
@@ -36,9 +37,9 @@ const RandomFact = ({randomFacts}) => {
   return (
     <div>
       <li>
-        <a href='javascript:void(0)' onClick={firstFact}>
+        <NavLink to='#' onClick={firstFact}>
           Did you know...?
-        </a>
+        </NavLink>
       </li>
       <Modal isOpen={!isOpen}
         onRequestClose={toggleModal}
