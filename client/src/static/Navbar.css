@@ -65,14 +65,9 @@
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.tiny-dino {
-  max-height: 20px;
-  padding-left: 0px;
-}
-
 .nav-items{
   display: flex;
-  }
+}
 
 .nav-items li{
   list-style: none;
@@ -95,6 +90,6 @@
   cursor: url("https://downloads.totallyfreecursors.com/cursor_files/dinosaurmale.cur"), url("https://downloads.totallyfreecursors.com/thumbnails/dinosaur-male.gif"), auto;
 }
 
-.favourite-dino-link {
+/* .favourite-dino-link {
   padding-left: 20px;
-}
+} */

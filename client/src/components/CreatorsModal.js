@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Modal from 'react-modal';
 import '../static/LandingModal.css';
 
-import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 const CreatorsModal = ({creators}) => {
 
   const [isOpen, setIsOpen] = useState(true);
-
   const toggleModal = () => setIsOpen(!isOpen);
 
   const creatorInfo = creators.map(creator => (

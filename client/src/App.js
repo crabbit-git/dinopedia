@@ -25,6 +25,7 @@ function App() {
     console.log(
       `User has saved the following dinosaurs as favourites: ${savedFavs}`
     );
+    console.log(`Loaded URL ${document.URL}`);
   }, []);
 
   // Load in random facts from database at startup
@@ -42,7 +43,6 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setCreators(data);
-      console.log('facts data', data);
     });
   }, []);
 
