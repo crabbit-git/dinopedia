@@ -11,21 +11,19 @@ const RandomFact = ({randomFacts}) => {
     setIsOpen(!isOpen);
   }
 
-  const commentList = randomFacts.map(fact => fact.comment)
+  const factsText = randomFacts.map(fact => fact.comment)
 
-  const randomFact = commentList[Math.floor(Math.random()*commentList.length)];
-  const randomFact2 = commentList[Math.floor(Math.random()*commentList.length)];
+  const randomFact = () => factsText[
+    Math.floor(
+      Math.random() * factsText.length
+    )
+  ];
 
   const [isOpen, setIsOpen] = useState(true);
   const [fact, setFact] = useState(randomFact);
 
   const changeFact = () => {
     setFact(randomFact);
-    if (randomFact !== fact) {
-      setFact(randomFact);
-      return fact
-    }
-    setFact(randomFact2);
     return fact
   }
 
