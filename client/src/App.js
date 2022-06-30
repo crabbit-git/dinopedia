@@ -56,8 +56,8 @@ function App() {
     }
   }, [allDinosaurs]);
 
-  // If list of favourite dinosaurs (JSON) changes state, check if it's empty,
-  // and if it isn't, write all of its dinosaur names to localStorage:
+  // If list of favourite dinosaurs (JSON) changes state, write all of its
+  // dinosaur names to localStorage:
   useEffect(() => {
     if (hasLoadedAllDinosaurs === true) {
       window.localStorage.setItem(
@@ -69,7 +69,7 @@ function App() {
 
   const handleAddFavDino = dinoId => {
     const foundFavDino = allDinosaurs.find(dinosaur => {
-      return dinosaur._id === dinoId // comparing the ID object to the ID string
+      return dinosaur._id === dinoId
     });
     setFavDinosaurs([...favDinosaurs, foundFavDino]);
   }

@@ -4,7 +4,7 @@ const {MongoClient} = require('mongodb');
 const dinoNames = [
   'Allosaurus',
   'Agnosphitys',
-  "Ankylosaurus",
+  'Ankylosaurus',
   'Apatosaurus',
   'Attenborosaurus',
   'Blikanasaurus',
@@ -31,42 +31,41 @@ const dinoNames = [
   'Velociraptor',
 ];
 
-const promisedDinos = dinoNames.map(dinoName => {
-  return fetch(`https://dinosaurpictures.org/api/dinosaur/${dinoName}`)
+const promisedDinos = dinoNames.map(dinoName =>
+  fetch(`https://dinosaurpictures.org/api/dinosaur/${dinoName}`)
   .then(response => response.json())
-});
+);
 
 const stripDinos = dinosFromApi => {
   return dinosFromApi.map(dino => {
     if (dino.name === 'Attenborosaurus') {
       dino.regions[0] = 'Europe';
-      dino.pics[2].url = "https://ichef.bbci.co.uk/images/ic/640x360/p0bzpk6z.jpg";
+      dino.pics[2].url = 'https://ichef.bbci.co.uk/images/ic/640x360/p0bzpk6z.jpg';
     }
-    if(dino.name === "Camposaurus"){
-      dino.mapUrl = "https://osm.org/go/Tw4N--?m="
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/Camposaurus_799e.jpg";
+    if(dino.name === 'Camposaurus'){
+      dino.mapUrl = 'https://osm.org/go/Tw4N--?m='
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/Camposaurus_799e.jpg';
     }
-    if(dino.name === "Brachiosaurus"){
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/papo_brachiosaurus_2012_cf3f.jpg";
+    if(dino.name === 'Brachiosaurus'){
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/papo_brachiosaurus_2012_cf3f.jpg';
     }
-    if(dino.name === "Blikanasaurus"){
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/blikanasaurus_cromptoni_by_teratophoneus-d4m7et6_7c92.jpg";
+    if(dino.name === 'Blikanasaurus'){
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/blikanasaurus_cromptoni_by_teratophoneus-d4m7et6_7c92.jpg';
     }
-    if(dino.name === "Thecodontosaurus"){
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/thecodontosaurus_4c53.jpg";
-     
+    if(dino.name === 'Thecodontosaurus'){
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/thecodontosaurus_4c53.jpg';
     }
-    if(dino.name === "Eocarcharia"){
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/Eocarcharia-Ezequiel-Vera_f54e.jpg";
+    if(dino.name === 'Eocarcharia'){
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/Eocarcharia-Ezequiel-Vera_f54e.jpg';
     }
-    if(dino.name === "Turiasaurus"){
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/Turiasaurus-Riodevensis_f10d.jpg";
+    if(dino.name === 'Turiasaurus'){
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/Turiasaurus-Riodevensis_f10d.jpg';
     }
-    if(dino.name === "Rapator"){
-      dino.pics[2].url =  "http://images.dinosaurpictures.org/__ridge_ripper____rapator___by_kunfuzzledful-d5n6ik2_5a51.jpg";
+    if(dino.name === 'Rapator'){
+      dino.pics[2].url = 'http://images.dinosaurpictures.org/__ridge_ripper____rapator___by_kunfuzzledful-d5n6ik2_5a51.jpg';
     }
-    if(dino.name === "Thanos"){
-      dino.pics[2].url =  "https://images.dinosaurpictures.org/Thanos/Thanos_gr8ArQ0_0555.jpg";
+    if(dino.name === 'Thanos'){
+      dino.pics[2].url = 'https://images.dinosaurpictures.org/Thanos/Thanos_gr8ArQ0_0555.jpg';
     }
     if (dino.regions.length === 0) {
       dino.regions[0] = 'unknown'
@@ -112,5 +111,3 @@ Promise.all(promisedDinos)
     .then(() => client.close());
   });
 });
-
-
