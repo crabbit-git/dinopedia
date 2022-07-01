@@ -7,24 +7,29 @@ Modal.setAppElement('#root');
 
 const RandomFact = ({randomFacts}) => {
   
+  const [isOpen, setIsOpen] = useState(true);
+  
   const toggleModal = () => {
     setIsOpen(!isOpen);
   }
 
-  const factsText = randomFacts.map(fact => fact.comment)
+  const facts = randomFacts.map(fact => fact.comment)
 
-  const randomFact = () => factsText[
+  const randomFact = () => facts[
     Math.floor(
-      Math.random() * factsText.length
+      Math.random() * facts.length
     )
   ];
 
-  const [isOpen, setIsOpen] = useState(true);
   const [fact, setFact] = useState(randomFact);
 
   const changeFact = () => {
-    setFact(randomFact);
-    return fact
+    let anotherFact = randomFact();
+    while (fact === anotherFact) {
+      anotherFact = randomFact();
+    }
+    setFact(anotherFact);
+    return fact;
   }
 
   const firstFact = () => {

@@ -68,16 +68,16 @@ function App() {
   }, [favDinosaurs]);
 
   const handleAddFavDino = dinoId => {
-    const foundFavDino = allDinosaurs.find(dinosaur => {
-      return dinosaur._id === dinoId
-    });
+    const foundFavDino = allDinosaurs.find(
+      dinosaur => dinosaur._id === dinoId
+    );
     setFavDinosaurs([...favDinosaurs, foundFavDino]);
   }
 
   const handleRemoveFavDino = dinoId => {
-    const filteredFavDinos = favDinosaurs.filter(favDinosaur => {
-      return favDinosaur._id !== dinoId
-    });
+    const filteredFavDinos = favDinosaurs.filter(
+      favDinosaur => favDinosaur._id !== dinoId
+    );
     setFavDinosaurs(filteredFavDinos);
   }
 
