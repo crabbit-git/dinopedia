@@ -36,7 +36,7 @@ const promisedDinos = dinoNames.map(dinoName =>
   .then(response => response.json())
 );
 
-const stripDinos = dinosFromApi => {
+const prepDinos = dinosFromApi => {
   return dinosFromApi.map(dino => {
     if (dino.name === 'Attenborosaurus') {
       dino.regions[0] = 'Europe';
@@ -106,8 +106,8 @@ Promise.all(promisedDinos)
   MongoClient
   .connect('mongodb://localhost:27017')
   .then(client => {
-    client.db('javasaurus').collection('dinosaurs')
-    .insertMany(stripDinos(data))
+    client.db('dinopedia').collection('dinosaurs')
+    .insertMany(prepDinos(data))
     .then(() => client.close());
   });
 });

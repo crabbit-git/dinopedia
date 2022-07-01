@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-const RandomFact = ({randomFacts}) => {
+const RandomFact = ({dinoFacts}) => {
   
   const [isOpen, setIsOpen] = useState(true);
   
@@ -13,7 +13,7 @@ const RandomFact = ({randomFacts}) => {
     setIsOpen(!isOpen);
   }
 
-  const facts = randomFacts.map(fact => fact.comment)
+  const facts = dinoFacts.map(fact => fact.body)
 
   const randomFact = () => facts[
     Math.floor(

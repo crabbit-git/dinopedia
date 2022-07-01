@@ -27,7 +27,7 @@ const CreatorsModal = ({creators}) => {
           </a>
         </li>
         <li>
-          <a className='creator-links' href={creator.GitHub}>
+          <a className='creator-links' href={creator.gitHub}>
             GitHub
           </a>
         </li>

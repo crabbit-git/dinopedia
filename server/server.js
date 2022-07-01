@@ -29,19 +29,19 @@ const createRouter = collection => {
 };
 
 MongoClient.connect('mongodb://localhost:27017') 
-  .then((client) => { 
-    const db = client.db('javasaurus'); 
-    const dinosaursCollection = db.collection('dinosaurs'); 
-    const dinosaursRouter = createRouter(dinosaursCollection); 
-    app.use('/api/dinosaurs', dinosaursRouter);
-    const creatorsCollection = db.collection('creators'); 
-    const creatorsRouter = createRouter(creatorsCollection); 
-    app.use('/api/creators', creatorsRouter);
-    const randomFactsCollection = db.collection('randomFacts'); 
-    const randomFactsRouter = createRouter(randomFactsCollection); 
-    app.use('/api/randomFacts', randomFactsRouter);
+  .then(client => {
+    const db = client.db('dinopedia');
+    app.use(
+      '/api/dinosaurs', createRouter(db.collection('dinosaurs'))
+    );
+    app.use(
+      '/api/creators', createRouter(db.collection('creators'))
+    );
+    app.use(
+      '/api/facts', createRouter(db.collection('dinoFacts'))
+    );
   })
-  .catch(console.err); 
+  .catch(console.err);
 
 app.listen(5000, function () {
   console.log(`Listening on port ${ this.address().port }`);

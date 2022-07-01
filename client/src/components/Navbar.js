@@ -8,12 +8,9 @@ import RandomFact from './RandomFact';
 import CreatorsModal from './CreatorsModal';
 import DinoAdLibs from './DinoAdLib';
 
-const Navbar = ({allDinosaurs, randomFacts, creators}) => {
+const Navbar = ({allDinosaurs, dinoFacts, creators}) => {
   let togglingPath = '/favourites';
   const CustomLink = ({ children, to, ...props }) => {
-    // if (document.URL.includes('/favourites')) {
-    //   togglingPath = '/';
-    // }
     let resolved = useResolvedPath(to);
     let match = useMatch({ path: resolved.pathname, end: true });
   
@@ -47,7 +44,7 @@ const Navbar = ({allDinosaurs, randomFacts, creators}) => {
             Favourites
           </CustomLink>
         </li>
-        <RandomFact randomFacts={randomFacts} />
+        <RandomFact dinoFacts={dinoFacts} />
         <DinoAdLibs />
         <CreatorsModal creators={creators} />
       </div>

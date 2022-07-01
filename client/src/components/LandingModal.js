@@ -24,7 +24,8 @@ const LandingModal = () => {
           >
             &times;
           </button>
-          <h3>Welcome to our WD_23 group project </h3>
+          <h3>Welcome to Dinopedia!</h3>
+          <p>Brought to you by Team Dinomite of CodeClan cohort WD23</p>
           <img
             className='landing-modal-image'
             src='https://codeclan.com/wp-content/uploads/2019/04/CodeClan-Logo-White-2019-01.png'
@@ -44,4 +45,3 @@ const LandingModal = () => {
 }
 
 export default LandingModal;
-

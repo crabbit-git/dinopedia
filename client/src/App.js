@@ -10,7 +10,7 @@ function App() {
   const [allDinosaurs, setAllDinosaurs] = useState([]);
   const [hasLoadedAllDinosaurs, setHasLoadedAllDinosaurs] = useState(false);
   const [favDinosaurs, setFavDinosaurs] = useState([]);
-  const [randomFacts, setRandomFacts] = useState([])
+  const [dinoFacts, setDinoFacts] = useState([])
   const [creators, setCreators] = useState([])
   const savedFavs = window.localStorage.getItem('favDinoNames');
 
@@ -28,12 +28,12 @@ function App() {
     console.log(`Loaded URL ${document.URL}`);
   }, []);
 
-  // Load in random facts from database at startup
+  // Load in random dinosaur facts from database at startup
   useEffect(() => {
-    fetch('http://localhost:5000/api/randomFacts/')
+    fetch('http://localhost:5000/api/facts/')
     .then(res => res.json())
     .then(data => {
-      setRandomFacts(data);
+      setDinoFacts(data);
     });
   }, []);
 
@@ -87,7 +87,7 @@ function App() {
       <Navbar
         allDinosaurs={allDinosaurs}
         creators={creators}
-        randomFacts={randomFacts}
+        dinoFacts={dinoFacts}
       />
       <ScrollToTop/>
       <Routes>
