@@ -39,7 +39,7 @@ const CreatorsModal = ({creators}) => {
     <div>
       <li>
         <NavLink to='#' onClick={toggleModal}>
-          Creators
+          Team Dinomite
         </NavLink>
       </li>
       <Modal isOpen={!isOpen}
