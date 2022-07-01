@@ -6,19 +6,19 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-const DinoCard = ({dino, cardDirection, handleAddFavDino, handleRemoveFavDino, isFavourite}) => {
+const DinoCard = (
+  {dino, cardDirection, handleAddFavDino, handleRemoveFavDino, isFavourite}
+) => {
   const containerClass = `container ${cardDirection}`;
   const timelineClass = `timeline ${dino.period}`
   const mapClass = `https://dinosaurpictures.org/${dino.mapUrl}`
 
   const [isOpen, setIsOpen] = useState(false);
-  const [hidden, setHidden] = useState(true); // What's this? Not being used?
 
   function toggleModal() {
     setIsOpen(!isOpen);
   }
-  
-  // const isToggled =() => setIsClicked( !isFavourite)
+
   const handleFavButtonClick = () => {
     if(isFavourite) {
       handleRemoveFavDino(dino._id) 
@@ -27,15 +27,15 @@ const DinoCard = ({dino, cardDirection, handleAddFavDino, handleRemoveFavDino, i
     }
   }
 
-// const [isClicked, setIsClicked] = useState(false)
-// const starOn = <FontAwesomeIcon icon ={faStar} className='star-class-on'/>
-// const starOff = <FontAwesomeIcon icon ={faStar} className='star-class-off'/>
-const toggleStar = <FontAwesomeIcon icon={faStar} className={isFavourite ? 'star-class-on' : 'star-class-off'}/>
+const toggleStar = <FontAwesomeIcon icon={faStar}
+  className={isFavourite ? 'star-class-on' : 'star-class-off'}
+/>
 
   return (
     <div id={dino.name.toLowerCase()} className={timelineClass}>
       <div className={containerClass}>
         <div className='date'>{dino.period}</div>
+        {/* TO DO: Add dino.era */}
         <i className='icon'/>
         <div className='content'>
           <img
