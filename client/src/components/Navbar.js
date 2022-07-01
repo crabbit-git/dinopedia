@@ -1,9 +1,8 @@
-import React from 'react';
 import {Link, useMatch, useResolvedPath} from 'react-router-dom';
 import '../static/Navbar.css'
 import '../static/LandingModal.css';
 import Search from './Search';
-import Player from './Audio';
+import DinoSounds from './DinoSounds';
 import RandomFact from './RandomFact';
 import CreatorsModal from './CreatorsModal';
 import DinoAdLibs from './DinoAdLib';
@@ -32,7 +31,7 @@ const Navbar = ({allDinosaurs, dinoFacts, creators}) => {
     <nav className='navbar'>
       <div className='logo-and-name'>
         <div className='logo'>
-          <Player />
+          <DinoSounds />
         </div>
         <div className='logo-name'>
           <Link to='/'>Dinopedia</Link>
