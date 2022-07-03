@@ -4,7 +4,7 @@ What you see in this repository is a group project by Team Dinomite, created as 
 
 The assignment brief was as follows:
 
-> A client is looking to improve their online offering of educational content by developing an interactive browser application that displays information about dinosaurs in a fun and interesting way. Your task is to make an a Minimum Viable Product or prototype to put forward to them. This may only be for a small set of information, and may only showcase some of the features to be included in the final app.
+> A client is looking to improve their online offering of educational content by developing an interactive browser application that displays information about dinosaurs in a fun and interesting way. Your task is to create a minimum viable product or prototype to put forward to them. This may only be for a small set of information, and may only showcase some of the features to be included in the final app.
 
 ## Possible future extensions to functionality
 - Add a quiz on the index page (test knowledge about all dinosaurs in the app)
