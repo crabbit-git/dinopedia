@@ -67,12 +67,12 @@ const toggleStar = <FontAwesomeIcon icon={faStar}
                  </button>
             </div>
 
-          <div className='dino-modal-image-div'>
+          {/* <div className='dino-modal-image-div'> */}
             <img className='dino-modal-image'
                 src={dino.pics[2].url}
                 alt={dino.name}
             />
-          </div>
+          {/* </div> */}
           <div className='dino-modal-info-div'>
               <div className='dino-modal-info'>
             

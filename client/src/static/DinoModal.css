@@ -82,24 +82,25 @@ font-family: 'Rubik Moonrocks', cursive; */
 
 
 
-.dino-modal-image-div{
-    position: relative;
-   
-    width: 75%;
-    height: 400px;
-}
+/* .dino-modal-image-div{ */
+    /* position: relative; */
+    /* margin: 0 auto;
+    width: auto;
+    height: 400px; */
+/* } */
 
 .dino-modal-image {
-    position: relative;
-    width: 700px;
-  
+    /* position: relative; */
+    /* width: 700px; */
+    display: flex;
+    margin: 0 auto;
     height: 400px;
     border-radius: 0px 50px 30px 50px;
     border: #0e5573 8px solid;
     box-shadow: 2px 2px 5px #000000;
-    filter: saturate(250%);
-    margin: 0px 50px;
-    max-width: fit-content;
+    /* filter: saturate(250%); */
+    /* margin: 0px 50px; */
+    /* max-width: fit-content; */
 }
 
 .dino-modal-title-div{
