@@ -1,6 +1,5 @@
 import '../static/Search.css'
 import $ from 'jquery'
-import React from 'react'
 
 const Search = ({allDinosaurs}) => {
 

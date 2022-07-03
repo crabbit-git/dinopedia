@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../static/LandingModal.css';
+import { useState } from 'react';
+import '../static/NavModals.css';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');

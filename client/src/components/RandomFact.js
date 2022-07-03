@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import { NavLink } from 'react-router-dom';
-import '../static/LandingModal.css';
+import '../static/NavModals.css';
 
 Modal.setAppElement('#root');
 

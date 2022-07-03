@@ -1,6 +1,6 @@
 import {Link, useMatch, useResolvedPath} from 'react-router-dom';
 import '../static/Navbar.css'
-import '../static/LandingModal.css';
+import '../static/NavModals.css';
 import Search from './Search';
 import DinoSounds from './DinoSounds';
 import RandomFact from './RandomFact';

@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from 'react-modal';
 import { NavLink } from 'react-router-dom';
 
 Modal.setAppElement('#root');
 
 const DinoAdLibs = () => {
-
   const [isOpen, setIsOpen] = useState(true);
   const [isOpen2, setIsOpen2] = useState(true);
   const [noun0, setNoun0] = useState('') 
