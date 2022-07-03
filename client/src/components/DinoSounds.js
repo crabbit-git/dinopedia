@@ -8,6 +8,7 @@ const useAudio = url => {
 
   useEffect(() => {
     playing ? audio.play() : audio.pause();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playing]);
 
   useEffect(() => {
@@ -15,6 +16,7 @@ const useAudio = url => {
     return () => {
       audio.removeEventListener('ended', () => setPlaying(false));
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [playing, toggle];

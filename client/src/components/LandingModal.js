@@ -29,6 +29,7 @@ const LandingModal = () => {
           <img
             className='landing-modal-image'
             src='https://codeclan.com/wp-content/uploads/2019/04/CodeClan-Logo-White-2019-01.png'
+            alt='CodeClan logo'
           />
           <br />
           <button

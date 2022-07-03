@@ -26,6 +26,7 @@ function App() {
       `User has saved the following dinosaurs as favourites: ${savedFavs}`
     );
     console.log(`Loaded URL ${document.URL}`);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Load in random dinosaur facts from database at startup
@@ -54,6 +55,7 @@ function App() {
         allDinosaurs.filter(dino => savedFavs.includes(dino.name))
       );
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allDinosaurs]);
 
   // If list of favourite dinosaurs (JSON) changes state, write all of its
@@ -65,6 +67,7 @@ function App() {
         JSON.stringify(favDinosaurs.map(dino => dino.name))
       );
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [favDinosaurs]);
 
   const handleAddFavDino = dinoId => {
