@@ -1,28 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Modal from 'react-modal';
 import { NavLink } from 'react-router-dom';
 import '../static/LandingModal.css';
-import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
 const RandomFact = ({dinoFacts}) => {
-  
   const [isOpen, setIsOpen] = useState(true);
-  
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  }
+  const toggleModal = () => setIsOpen(!isOpen);
 
-  const facts = dinoFacts.map(fact => fact.body)
-
-  const randomFact = () => facts[
-    Math.floor(
-      Math.random() * facts.length
-    )
-  ];
-
+  const facts = dinoFacts.map(fact => fact.body);
+  const randomFact = () => facts[Math.floor(Math.random() * facts.length)];
   const [fact, setFact] = useState(randomFact);
-
   const changeFact = () => {
     let anotherFact = randomFact();
     while (fact === anotherFact) {
@@ -31,7 +20,6 @@ const RandomFact = ({dinoFacts}) => {
     setFact(anotherFact);
     return fact;
   }
-
   const firstFact = () => {
     toggleModal();
     changeFact();
@@ -61,7 +49,7 @@ const RandomFact = ({dinoFacts}) => {
         <button type='button'
           onClick={changeFact} className='landing-modal-button'
         >
-          Give me another!
+          Gimme another fact!
         </button>
       </Modal>
     </div>
