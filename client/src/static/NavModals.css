@@ -20,7 +20,7 @@
     .landing-modal-content {
         display: flex;
         flex-direction: column;
-        background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/01/19/30297/e677e440bb636b6f6d0b3e250e60e8f5.jpg");
+        background-image: url('assets/Multi_Monitor_Dual_Screen_cg_digital_art_manip_ocean_sea_sky_planets_sci_fi_mood_clouds.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -88,7 +88,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
     background-color: #171c24;
-    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
+    background-image: url('assets/sauropod_1f995.png');
     background-repeat: no-repeat;
     background-size: 55px;
     background-position: 10px;
@@ -195,7 +195,7 @@ h3.creator-title{
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
     background-color: #171c24;
-    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
+    background-image: url('assets/sauropod_1f995.png');
     background-repeat: no-repeat;
     background-size: 55px;
     background-position: 10px;
@@ -318,7 +318,7 @@ h3.adlib-form-title{
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
     background-color: #171c24;
-    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
+    background-image: url('assets/sauropod_1f995.png');
     background-repeat: no-repeat;
     background-size: 55px;
     background-position: 10px;
@@ -339,7 +339,7 @@ h3.adlib-form-title{
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
     background-color: #171c24;
-    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png');
+    background-image: url('assets/sauropod_1f995.png');
     background-repeat: no-repeat;
     background-size: auto 70px;
     padding-left: 40px;

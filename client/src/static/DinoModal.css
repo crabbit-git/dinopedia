@@ -45,16 +45,15 @@ font-family: 'Rubik Moonrocks', cursive; */
 .dino-modal-content {
     display: flex;
     flex-direction: column;
-    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/01/19/30297/e677e440bb636b6f6d0b3e250e60e8f5.jpg");
+    background-image: url('assets/Multi_Monitor_Dual_Screen_cg_digital_art_manip_ocean_sea_sky_planets_sci_fi_mood_clouds.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    position: absolute;
-    top: 150px;
+    position: fixed;
+    top: 15%;
     left: 25%;
-    right: inherit;
     
-    height:800px ;
+    height:800px;
     width: 50%;
     min-height: 75%;
     max-height: 75%;
@@ -62,11 +61,11 @@ font-family: 'Rubik Moonrocks', cursive; */
     max-width: 860px;
     border: 3px solid #0e5573;
     overflow: auto;
-    /* -webkit-overflow-scrolling: touch; */
     border-radius: 0px 50px 30px 50px;
     outline: none;
     box-shadow: 2px 2px 7px #000000;
 }
+
 .dino-modal-inner{
     width: 800px;
     min-width: 600px;

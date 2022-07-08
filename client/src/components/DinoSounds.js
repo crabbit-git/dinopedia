@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import logo from '../static/assets/sauropod_1f995.png';
+import soundscape from '../static/assets/jurassic-soundscape.mp3';
 
 const useAudio = url => {
   const [audio] = useState(new Audio(url));
@@ -24,14 +26,14 @@ const useAudio = url => {
 
 const DinoSounds = () => {
   const [playing, toggle] = useAudio(
-    'https://www.nhm.ac.uk/content/dam/nhmwww/take-part/dippy-on-tour/jurassic-soundscape.mp3'
+    soundscape
   );
 
   return (
     <div>
       <img
         onClick={toggle} id='logo-pic'
-        src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/twitter/322/sauropod_1f995.png'
+        src={logo}
         alt='dino logo'
       /> 
       {playing}
