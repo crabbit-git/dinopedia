@@ -1,5 +1,7 @@
 # Dinopedia
 
+![Dinopedia](/client/src/static/assets/dinopedia_screenshot.png)
+
 What you see in this repository is a group project by Team Dinomite, created as our final assignment for a software development course at CodeClan with the rest of cohort WD23. Individually, we are [Colette Dufficy](https://github.com/ColetteDufficy), [Sean Johnson](https://github.com/sjohns2020), [Heather Lamont](https://github.com/HeatherLamont), and [Xander Mackenzie](https://github.com/crabbit-git).
 
 The assignment brief was as follows:
